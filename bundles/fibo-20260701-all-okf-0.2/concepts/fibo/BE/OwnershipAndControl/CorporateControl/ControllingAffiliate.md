@@ -1,0 +1,47 @@
+---
+owl:
+  annotations:
+  - predicate: http://www.w3.org/2000/01/rdf-schema#label
+    value: controlling affiliate
+  - predicate: http://www.w3.org/2004/02/skos/core#definition
+    value: controlling party in an affiliation situation
+  rdf_types:
+  - http://www.w3.org/2002/07/owl#Class
+  subclass_of:
+  - concept: /concepts/fibo/BE/OwnershipAndControl/ControlParties/MajorityControllingParty.md
+    predicate: http://www.w3.org/2000/01/rdf-schema#subClassOf
+    resource: https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/ControlParties/MajorityControllingParty
+  - concept: /concepts/fibo/BE/OwnershipAndControl/CorporateControl/Affiliate.md
+    predicate: http://www.w3.org/2000/01/rdf-schema#subClassOf
+    resource: https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/Affiliate
+resource: https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/ControllingAffiliate
+sources:
+- id: fibo-source-23da6b47b0
+  resource: references/fibo/BE/OwnershipAndControl/CorporateControl.rdf
+  sha256: 23da6b47b01ef29d26d5aa063b88cb62e44c676204d905b98e96322c216195ab
+  title: FIBO source BE/OwnershipAndControl/CorporateControl.rdf
+title: controlling affiliate
+type: Ontology Class
+---
+
+# controlling affiliate
+
+Canonical resource: <https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/ControllingAffiliate>
+
+## Definition
+
+controlling party in an affiliation situation
+
+## Relationships
+
+- **Subclass of**: [MajorityControllingParty](/concepts/fibo/BE/OwnershipAndControl/ControlParties/MajorityControllingParty.md)
+- **Subclass of**: [Affiliate](/concepts/fibo/BE/OwnershipAndControl/CorporateControl/Affiliate.md)
+
+## Annotations
+
+- **label**: controlling affiliate
+- **definition**: controlling party in an affiliation situation
+
+## Source fidelity
+
+The complete RDF/OWL statements for this resource are retained in the source document referenced by the `sources` frontmatter. The `owl` frontmatter extension carries the profile's structured projection of relationships, restrictions, characteristics, and annotations.

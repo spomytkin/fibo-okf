@@ -1,0 +1,45 @@
+name: fibo
+version: "0.1.0"
+namespace: https://spec.edmcouncil.org/fibo/ontology/
+path_strategy: ontology-module
+title_predicates:
+  - https://www.w3.org/2004/02/skos/core#prefLabel
+  - http://www.w3.org/2000/01/rdf-schema#label
+definition_predicates:
+  - https://www.omg.org/spec/Commons/AnnotationVocabulary/definition
+  - http://www.w3.org/2004/02/skos/core#definition
+  - http://www.w3.org/2000/01/rdf-schema#comment
+synonym_predicates:
+  - http://www.w3.org/2004/02/skos/core#altLabel
+  - http://www.w3.org/2004/02/skos/core#hiddenLabel
+entity_types:
+  class: Ontology Class
+  object_property: Ontology Property
+  datatype_property: Ontology Property
+  annotation_property: Ontology Property
+  property: Ontology Property
+  individual: Ontology Individual
+  ontology: Ontology Definition
+  concept: Ontology Concept
+relationship_predicates:
+  http://www.w3.org/2000/01/rdf-schema#subClassOf: subclass_of
+  http://www.w3.org/2000/01/rdf-schema#subPropertyOf: subproperty_of
+  http://www.w3.org/2000/01/rdf-schema#domain: domain
+  http://www.w3.org/2000/01/rdf-schema#range: range
+  http://www.w3.org/2002/07/owl#equivalentClass: equivalent_to
+  http://www.w3.org/2002/07/owl#equivalentProperty: equivalent_to
+  http://www.w3.org/2002/07/owl#disjointWith: disjoint_with
+  http://www.w3.org/2002/07/owl#inverseOf: inverse_of
+  http://www.w3.org/2002/07/owl#sameAs: same_as
+  http://www.w3.org/2002/07/owl#differentFrom: different_from
+  http://www.w3.org/2000/01/rdf-schema#seeAlso: see_also
+  http://www.w3.org/2000/01/rdf-schema#isDefinedBy: defined_by
+included_entity_kinds:
+  - class
+  - object_property
+  - datatype_property
+  - annotation_property
+  - property
+  - individual
+  - ontology
+  - concept

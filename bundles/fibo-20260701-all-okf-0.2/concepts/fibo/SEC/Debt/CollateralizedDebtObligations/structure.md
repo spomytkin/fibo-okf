@@ -1,0 +1,50 @@
+---
+owl:
+  annotations:
+  - language: en
+    predicate: http://www.w3.org/2000/01/rdf-schema#label
+    value: has structure type
+  - language: en
+    predicate: http://www.w3.org/2004/02/skos/core#definition
+    value: The source of funds for the CDO. This is either cashflow or market value.
+  domain:
+  - concept: /concepts/fibo/SEC/Debt/CollateralizedDebtObligations/CollateralizedDebtObligation.md
+    predicate: http://www.w3.org/2000/01/rdf-schema#domain
+    resource: https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/CollateralizedDebtObligation
+  range:
+  - concept: /concepts/fibo/SEC/Debt/CollateralizedDebtObligations/CDOCashflowTreatmentStructure.md
+    predicate: http://www.w3.org/2000/01/rdf-schema#range
+    resource: https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/CDOCashflowTreatmentStructure
+  rdf_types:
+  - http://www.w3.org/2002/07/owl#ObjectProperty
+resource: https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/structure
+sources:
+- id: fibo-source-a5aa66c8b9
+  resource: references/fibo/SEC/Debt/CollateralizedDebtObligations.rdf
+  sha256: a5aa66c8b98fee8abed9ce7c551e395e57aaf20d005a706aa7c4a7d7a66136bc
+  title: FIBO source SEC/Debt/CollateralizedDebtObligations.rdf
+title: has structure type
+type: Ontology Property
+---
+
+# has structure type
+
+Canonical resource: <https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/structure>
+
+## Definition
+
+The source of funds for the CDO. This is either cashflow or market value.
+
+## Relationships
+
+- **Domain**: [CollateralizedDebtObligation](/concepts/fibo/SEC/Debt/CollateralizedDebtObligations/CollateralizedDebtObligation.md)
+- **Range**: [CDOCashflowTreatmentStructure](/concepts/fibo/SEC/Debt/CollateralizedDebtObligations/CDOCashflowTreatmentStructure.md)
+
+## Annotations
+
+- **label** (en): has structure type
+- **definition** (en): The source of funds for the CDO. This is either cashflow or market value.
+
+## Source fidelity
+
+The complete RDF/OWL statements for this resource are retained in the source document referenced by the `sources` frontmatter. The `owl` frontmatter extension carries the profile's structured projection of relationships, restrictions, characteristics, and annotations.

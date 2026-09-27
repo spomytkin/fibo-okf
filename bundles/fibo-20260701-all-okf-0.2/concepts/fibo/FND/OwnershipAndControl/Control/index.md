@@ -1,0 +1,16 @@
+# Concepts
+
+* [control](Control.md)
+* [controlled thing](ControlledThing.md)
+* [controlling party](ControllingParty.md)
+* [de facto control](DeFactoControl.md)
+* [de jure control](DeJureControl.md)
+* [has controlling party](hasControllingParty.md)
+* [has party in control](hasPartyInControl.md)
+* [involves controlled thing](involvesControlledThing.md)
+* [is controlled party of](isControlledPartyOf.md)
+* [is controlled thing in](isControlledThingIn.md)
+* [is controlling party in](isControllingPartyIn.md)
+* [is controlling party of](isControllingPartyOf.md)
+* [is initially controlled on](isInitiallyControlledOn.md)
+* [is party controlling](isPartyControlling.md)
