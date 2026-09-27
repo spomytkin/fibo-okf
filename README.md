@@ -1,3 +1,22 @@
+# FIBO to OKF 0.2 Converter & Versioned Bundle
+
+This repository ([spomytkin/fibo-okf](https://github.com/spomytkin/fibo-okf)) provides a reproducible, open-source tool for converting the **Financial Industry Business Ontology (FIBO)** into the **OKF 0.2** format, along with versioned distribution bundles.
+
+## Fork Goals
+
+- **Reproducible Conversion Tooling**: Deliver an open-source, deterministic conversion tool for transforming FIBO ontologies into OKF 0.2 format from documented inputs.
+- **Versioned Output Bundles**: Produce and distribute versioned conversion bundles containing generated artifacts, schemas, and execution metadata.
+- **Open & Auditable Pipeline**: Keep all transformation rules and scripts fully transparent so outputs can be inspected, verified, and enhanced.
+
+## Overview & Deliverables
+
+1. **FIBO $\rightarrow$ OKF 0.2 Conversion Engine**: Python/CLI tool to process FIBO source models into OKF 0.2 compliant structures.
+2. **Versioned Bundles**: Release packages containing converted assets alongside provenance metadata identifying exact source inputs and build versions.
+
+## Repository
+
+- **Fork Repository**: [https://github.com/spomytkin/fibo-okf](https://github.com/spomytkin/fibo-okf)
+
 <img src="https://github.com/edmcouncil/html-pages/raw/develop/general/assets/img/FIBO_logo.jpg" width="200" align="right"/>
 
 # Financial Industry Business Ontology
