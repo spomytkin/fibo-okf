@@ -1,0 +1,15 @@
+# Concepts
+
+* [business entity](BusinessEntity.md)
+* [business license](BusinessLicense.md)
+* [chartered legal person](CharteredLegalPerson.md)
+* [has intended liquidation date](hasIntendedLiquidationDate.md)
+* [legally competent natural person](LegallyCompetentNaturalPerson.md)
+* [not for profit objective](NotForProfitObjective.md)
+* [power of attorney](PowerOfAttorney.md)
+* [profit objective](ProfitObjective.md)
+* [public purpose](PublicPurpose.md)
+* [religious objective](ReligiousObjective.md)
+* [fonds commun de placement](SpecialPurposeVehicle.md)
+* [statutory body](StatutoryBody.md)
+* [variable interest entity](VariableInterestEntity.md)

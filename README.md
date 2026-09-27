@@ -17,6 +17,19 @@ This repository ([spomytkin/fibo-okf](https://github.com/spomytkin/fibo-okf)) pr
 
 - **Fork Repository**: [https://github.com/spomytkin/fibo-okf](https://github.com/spomytkin/fibo-okf)
 
+## Convert FIBO to OKF
+
+The reusable `converter/` project separates RDF ingestion, a generic OWL semantic model, ontology profiles, OKF projection, rendering, and validation. The first profile targets FIBO. It reads local RDF/XML, OWL, Turtle, N3, N-Triples, and self-contained JSON-LD sources with pinned RDFLib and PyYAML dependencies. It writes versioned OKF 0.2 bundles and keeps source ontologies inside each bundle so OWL structures that do not project into Markdown remain intact.
+
+```console
+python -m pip install ./converter
+owl2okf compile . ./bundles --profile fibo
+```
+
+The default creates one bundle covering all FIBO domains. Use `--scope domains` to create one bundle per domain, or `--scope BE` (or another domain code) for one domain. The output directory must not already exist. Imports resolve through the local `catalog-v001.xml`; builds do not fetch ontology files or remote JSON-LD contexts. The bundle name is derived from the newest FIBO `owl:versionIRI` date. Each bundle includes a manifest with source hashes, source revision, compiler/profile versions, runtime dependencies, and asserted-only reasoning mode; `conversion-report.json` records counts, unresolved imports, unsupported constructs, conformance errors, and quality warnings.
+
+Generated Markdown covers named FIBO classes, properties, individuals, ontologies, and concepts. Canonical IRIs are recorded in OKF's `resource` field. The profile-owned `owl` frontmatter extension carries structured relationships, property characteristics, annotations, and basic cardinality/value restrictions, with readable relationship and constraint sections in the Markdown body. Unsupported OWL expressions are reported, while included RDF/XML/Turtle sources remain the authoritative representation of the full graph.
+
 <img src="https://github.com/edmcouncil/html-pages/raw/develop/general/assets/img/FIBO_logo.jpg" width="200" align="right"/>
 
 # Financial Industry Business Ontology

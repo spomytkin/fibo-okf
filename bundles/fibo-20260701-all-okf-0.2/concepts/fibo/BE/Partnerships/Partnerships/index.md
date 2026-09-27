@@ -1,0 +1,15 @@
+# Concepts
+
+* [general partner](GeneralPartner.md)
+* [general partnership](GeneralPartnership.md)
+* [has general partner](hasGeneralPartner.md)
+* [has limited partner](hasLimitedPartner.md)
+* [is general partner of](isGeneralPartnerOf.md)
+* [is limited partner of](isLimitedPartnerOf.md)
+* [limited liability limited partnership](LimitedLiabilityLimitedPartnership.md)
+* [limited liability partnership](LimitedLiabilityPartnership.md)
+* [limited partner](LimitedPartner.md)
+* [limited partnership](LimitedPartnership.md)
+* [partner](Partner.md)
+* [partnership](Partnership.md)
+* [partnership agreement](PartnershipAgreement.md)

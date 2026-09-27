@@ -1,0 +1,17 @@
+# Concepts
+
+* [Corporations](Corporations/)
+* [FunctionalEntities](FunctionalEntities/)
+* [GovernmentEntities](GovernmentEntities/)
+* [LegalEntities](LegalEntities/)
+* [MetadataBE](MetadataBE/)
+* [OwnershipAndControl](OwnershipAndControl/)
+* [Partnerships](Partnerships/)
+* [PrivateLimitedCompanies](PrivateLimitedCompanies/)
+* [SoleProprietorships](SoleProprietorships/)
+* [Trusts](Trusts/)
+* [Business Entities Domain, European Extension](AllBE-Europe.md)
+* [Business Entities Domain, North American Extension](AllBE-NorthAmerica.md)
+* [Business Entities Domain, Reference Individuals](AllBE-ReferenceIndividuals.md)
+* [All Business Entities (BE) Domain](AllBE.md)
+* [Metadata about the FIBO Business Entities (BE) Domain](MetadataBE.md)

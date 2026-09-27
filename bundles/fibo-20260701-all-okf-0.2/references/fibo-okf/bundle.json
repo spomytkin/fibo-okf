@@ -1,0 +1,2508 @@
+{
+  "bundle_format": "OKF",
+  "bundle_name": "fibo-20260701-all-okf-0.2",
+  "compiler": {
+    "dependencies": {
+      "PyYAML": "6.0.3",
+      "rdflib": "7.6.0"
+    },
+    "name": "owl2okf",
+    "profile": "fibo",
+    "profile_sha256": "8e6b8e309f6616ccbf275dc83cc3e50ed0d7321f69c00d9ab76f9fee848ed34a",
+    "profile_version": "0.1.0",
+    "python_version": "3.14.4",
+    "version": "0.1.0"
+  },
+  "okf_version": "0.2",
+  "source": {
+    "fibo_version": "20260701",
+    "git_revision": "0ad71d2a36bdf62bcb63494e84c9d368e55a7282",
+    "imports": [
+      "http://www.w3.org/2004/02/skos/core",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTermMapping/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSTaxonomy/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/MetadataACTUS/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-NorthAmericanExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/AllBE-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/AllBE/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/FunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/MetadataBEFunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/FunctionalEntities/Publishers/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/AsianJurisdiction/CentralAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/AsianJurisdiction/EasternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/AsianJurisdiction/SoutheasternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/AsianJurisdiction/SouthernAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/AsianJurisdiction/WesternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/EasternEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/NorthernEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/SouthernEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/EuropeanJurisdiction/WesternEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/GovernmentEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/LatinAmericanJurisdiction/CentralAmericanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/MetadataBEGovernmentEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/CAGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/CaribbeanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/CorporateBodies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/FormalBusinessOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LEIEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/LegalPersons/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/LegalEntities/MetadataBELegalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/MetadataBE/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/ControlParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/CorporateOwnership/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/Executives/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/MetadataBEOwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/OwnershipAndControl/OwnershipParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/Partnerships/MetadataBEPartnerships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/Partnerships/Partnerships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/MetadataBEPrivateLimitedCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/PrivateLimitedCompanies/PrivateLimitedCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/SoleProprietorships/MetadataBESoleProprietorships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/SoleProprietorships/SoleProprietorships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/Trusts/MetadataBETrusts/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/Trusts/Trusts/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/MetadataBP/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/Process/FinancialContextAndProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/Process/MetadataBPProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/AgencyMBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/DebtIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/EquitiesIPOIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceDocuments/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MetadataBPSecuritiesIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MuniIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/PrivateLabelMBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/CorporateActions/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/GLEIF-CorporateActionIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/ISO15022-CorporateActionIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/MetadataCAECorporateEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/SecurityRelatedCorporateActions/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/MetadataCAE/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/AllDER/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/CreditDerivatives/CreditDefaultSwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/CreditDerivatives/MetadataDERCreditDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CommoditiesContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/CurrencyContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesBasics/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/DerivativesMasterAgreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/ExoticOptions/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/FuturesAndForwards/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/MetadataDERDerivativesContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Options/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/RightsAndWarrants/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/StructuredInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/Swaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/DerivativesContracts/SwapsIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/MetadataDER/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/IRSwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/MetadataDERRateDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/RateDerivatives/RateDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/EquitySwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/MetadataDERSecurityBasedDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/SecurityBasedDerivatives/SecurityBasedDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/LegalEntities/DowJonesIndustrialAverageCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/LegalEntities/DowJonesIndustrialAverageExecutives/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/LegalEntities/FinancialInstitutionExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/LegalEntities/MarketsAndExchangesExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/LegalEntities/MetadataEXMPLegalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/MetadataEXMP/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/Securities/EquitiesExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/Securities/EquityIndexExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/Securities/IRSwapExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/Securities/MetadataEXMPSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-EuropeAndNorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC-ReferenceMarkets/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/AllFBC/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/CreditEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/CreditRatings/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Debt/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/Guaranty/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/MetadataFBCDebtAndEquities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/FinancialInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/InstrumentPricing/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/MetadataFBCFinancialInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FinancialInstruments/Settlement/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessCenters/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessCentersIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/BusinessRegistries/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/CommercialRegistrationAuthorities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EUFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/FinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/MarketsIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/MetadataFBCFunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/CAFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USNationalInformationCenterControlledVocabularies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/RegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/MetadataFBC/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/ClientsAndAccounts/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/MetadataFBCProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CashFlows/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/ISO4217-CurrencyCodes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/MetadataFNDAccounting/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/MetadataFNDAgentsAndPeople/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/People/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Agreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/MetadataFNDAgreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/AllFND-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/AllFND/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Assessments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/ClassificationSchemes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/IdentifiersAndIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Lifecycles/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/MetadataFNDArrangements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Ratings/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/BusinessDates/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/MetadataFNDDatesAndTimes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/MetadataFNDGoalsAndObjectives/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/GoalsAndObjectives/Objectives/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCapacity/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Law/LegalCore/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Law/MetadataFNDLaw/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/MetadataFND/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/FormalOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/MetadataFNDOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Organizations/TestFormalOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Control/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/MetadataFNDOwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/Ownership/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/OwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/OwnershipAndControl/TestControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Parties/MetadataFNDParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/Addresses/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/MetadataFNDPlaces/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddresses/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/RealProperty/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Places/VirtualPlaces/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/MetadataFNDProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/PaymentsAndSchedules/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Relations/MetadataFNDRelations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/MarketTransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/MetadataFNDTransactionsExt/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/SecuritiesTransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/AllIND-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/AllIND-ReferenceRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/AllIND/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/EconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/MetadataINDEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/NorthAmericanIndicators/CAEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/EconomicIndicators/NorthAmericanIndicators/USEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/ForeignExchange/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/ForeignExchange/MetadataINDForeignExchange/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/Indicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/Indicators/MetadataINDIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/CommonInterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/InterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MarketDataProviders/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/InterestRates/MetadataINDInterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/MarketIndices/BasketIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/MarketIndices/MetadataINDMarketIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/MetadataIND/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanApplications/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/Loans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoansRegulatory/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/MetadataLOANLoansGeneral/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/CardAccounts/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/CommercialLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/ConsumerLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/GreenLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/LoanProducts/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/MarineFinance/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/MetadataLOANLoansSpecific/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/StudentLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/MetadataLOAN/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/ConstructionLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/HomeMortgageDisclosureActCoveredMortgages/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/MetadataLOANRealEstateLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/MortgageOrigination/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/Mortgages/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/MetadataMDCIVTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtAnalytics/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/MetadataMDDebtTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/ETOptionsTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/FuturesTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/MetadataMDDerivativesTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/MetadataMD/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/MetadataMDTemporalCore/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityCreditStatuses/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityTradingStatuses/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/AllSEC/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/AssetBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/Bonds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DebtInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DistributedLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/ExerciseConventions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MetadataSECDebt/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MortgageBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/PoolBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/SyntheticCDOs/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/TradedShortTermDebt/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/DepositaryReceipts/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/EquityCFIClassificationIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/EquityInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Equities/MetadataSECEquities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/CollectiveInvestmentVehicles/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/Funds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/MetadataSECFunds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/MetadataSEC/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Baskets/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/EuropeanSecurities/EUSecuritiesRestrictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/MetadataSECSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/NorthAmericanSecurities/USSecuritiesRestrictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/ParametricSchedules/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/Pools/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesClassification/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIdentification/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIdentificationIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesListings/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Securities/SecuritiesRestrictions/",
+      "https://www.omg.org/spec/Commons/AnnotationVocabulary/",
+      "https://www.omg.org/spec/Commons/BusinessAuthorizations/",
+      "https://www.omg.org/spec/Commons/Classifiers/",
+      "https://www.omg.org/spec/Commons/CodesAndCodeSets/",
+      "https://www.omg.org/spec/Commons/Collections/",
+      "https://www.omg.org/spec/Commons/ContextualDesignators/",
+      "https://www.omg.org/spec/Commons/ContextualIdentifiers/",
+      "https://www.omg.org/spec/Commons/DatesAndTimes/",
+      "https://www.omg.org/spec/Commons/Designators/",
+      "https://www.omg.org/spec/Commons/Documents/",
+      "https://www.omg.org/spec/Commons/Identifiers/",
+      "https://www.omg.org/spec/Commons/Languages/",
+      "https://www.omg.org/spec/Commons/Locations/",
+      "https://www.omg.org/spec/Commons/Organizations/",
+      "https://www.omg.org/spec/Commons/PartiesAndSituations/",
+      "https://www.omg.org/spec/Commons/QuantitiesAndUnits/",
+      "https://www.omg.org/spec/Commons/RegistrationAuthorities/",
+      "https://www.omg.org/spec/Commons/RegulatoryAgencies/",
+      "https://www.omg.org/spec/Commons/RolesAndCompositions/",
+      "https://www.omg.org/spec/Commons/SitesAndFacilities/",
+      "https://www.omg.org/spec/Commons/StructuredCollections/",
+      "https://www.omg.org/spec/Commons/TextDatatype/",
+      "https://www.omg.org/spec/LCC/Countries/CountryRepresentation/",
+      "https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/",
+      "https://www.omg.org/spec/LCC/Countries/ISO3166-2-SubdivisionCodes/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-AD/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-AG/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-AL/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-AS/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-AT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BA/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BB/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BE/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BG/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BQ/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BS/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BY/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-BZ/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CA/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CH/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CR/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CU/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-CZ/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-DE/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-DK/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-DM/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-DO/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-EE/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-ES/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-FI/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-FR/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GB/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GD/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GG/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GL/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GP/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GR/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-GT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-HN/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-HR/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-HT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-HU/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-IE/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-IS/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-IT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-KN/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-KY/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-LC/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-LI/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-LT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-LU/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-LV/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MC/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MD/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-ME/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MF/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MK/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MP/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-MX/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-NI/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-NL/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-NO/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-PA/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-PL/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-PM/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-PT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-RO/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-RS/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-RU/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SE/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SI/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SJ/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SK/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SM/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-SV/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-TC/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-TT/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-UA/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-UM/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-US/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-VC/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-VG/",
+      "https://www.omg.org/spec/LCC/Countries/Regions/ISO3166-2-SubdivisionCodes-VI/",
+      "https://www.omg.org/spec/LCC/Countries/UN-M49-RegionCodes/"
+    ],
+    "owl_version_iris": [
+      "https://spec.edmcouncil.org/fibo/ontology/20260401/MetadataFIBO/",
+      "https://spec.edmcouncil.org/fibo/ontology/20260701/AboutFIBODev-TBoxOnly/",
+      "https://spec.edmcouncil.org/fibo/ontology/20260701/AboutFIBODev/",
+      "https://spec.edmcouncil.org/fibo/ontology/20260701/AboutFIBOProd-IncludingReferenceData/",
+      "https://spec.edmcouncil.org/fibo/ontology/20260701/AboutFIBOProd-TBoxOnly/",
+      "https://spec.edmcouncil.org/fibo/ontology/20260701/AboutFIBOProd/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/20260601/MetadataACTUS/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUS-examples/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTermMapping/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSContractTerms/",
+      "https://spec.edmcouncil.org/fibo/ontology/ACTUS/ACTUSTaxonomy/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/Corporations/MetadataBECorporations/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/FunctionalEntities/MetadataBEFunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/GovernmentEntities/MetadataBEGovernmentEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/OwnershipAndControl/MetadataBEOwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/Partnerships/MetadataBEPartnerships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/PrivateLimitedCompanies/MetadataBEPrivateLimitedCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/SoleProprietorships/MetadataBESoleProprietorships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20230101/Trusts/MetadataBETrusts/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/AsianJurisdiction/CentralAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/AsianJurisdiction/EasternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/AsianJurisdiction/SoutheasternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/AsianJurisdiction/SouthernAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/AsianJurisdiction/WesternAsiaGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/EuropeanJurisdiction/NorthernEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/EuropeanJurisdiction/SouthernEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/EuropeanJurisdiction/WesternEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/LatinAmericanJurisdiction/CentralAmericanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/NorthAmericanJurisdiction/CAGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/NorthAmericanJurisdiction/CaribbeanGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/LegalEntities/LEIEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/OwnershipAndControl/ControlParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/OwnershipAndControl/CorporateControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/OwnershipAndControl/OwnershipParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/Partnerships/Partnerships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/PrivateLimitedCompanies/PrivateLimitedCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250301/SoleProprietorships/SoleProprietorships/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250501/AllBE-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250501/AllBE-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20250501/AllBE-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251001/AllBE/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251001/Corporations/Corporations/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251002/LegalEntities/CorporateBodies/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251101/GovernmentEntities/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251101/GovernmentEntities/EuropeanJurisdiction/EasternEuropeGovernmentEntitiesAndJurisdictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251201/GovernmentEntities/GovernmentEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251201/LegalEntities/LegalPersons/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20251201/OwnershipAndControl/Executives/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260401/MetadataBE/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260601/FunctionalEntities/Publishers/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260601/LegalEntities/MetadataBELegalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260601/Trusts/Trusts/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260701/FunctionalEntities/FunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260701/LegalEntities/FormalBusinessOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/BE/20260701/OwnershipAndControl/CorporateOwnership/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/20230201/Process/MetadataBPProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/20230201/SecuritiesIssuance/MetadataBPSecuritiesIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/20260401/MetadataBP/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/Process/FinancialContextAndProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/AgencyMBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/DebtIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/EquitiesIPOIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceDocuments/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/IssuanceProcess/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/MuniIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/BP/SecuritiesIssuance/PrivateLabelMBSIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/20230201/AllCAE/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/20230201/CorporateEvents/MetadataCAECorporateEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/20260401/MetadataCAE/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/20260701/CorporateEvents/CorporateActions/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/GLEIF-CorporateActionIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/ISO15022-CorporateActionIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/CAE/CorporateEvents/SecurityRelatedCorporateActions/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20230201/AllDER-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20230201/CreditDerivatives/MetadataDERCreditDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20230201/SecurityBasedDerivatives/MetadataDERSecurityBasedDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20230401/DerivativesContracts/MetadataDERDerivativesContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20230401/DerivativesContracts/StructuredInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250301/DerivativesContracts/ExoticOptions/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250301/DerivativesContracts/Swaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250301/SecurityBasedDerivatives/EquitySwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250401/DerivativesContracts/Options/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250401/RateDerivatives/IRSwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250401/RateDerivatives/RateDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250601/AllDER/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250601/DerivativesContracts/DerivativesMasterAgreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250701/DerivativesContracts/CommoditiesContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250701/DerivativesContracts/FuturesAndForwards/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250801/CreditDerivatives/CreditDefaultSwaps/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20250801/DerivativesContracts/RightsAndWarrants/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20251201/DerivativesContracts/CurrencyContracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20251201/SecurityBasedDerivatives/SecurityBasedDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20260401/MetadataDER/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20260601/DerivativesContracts/DerivativesBasics/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20260601/DerivativesContracts/SwapsIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/DER/20260601/RateDerivatives/MetadataDERRateDerivatives/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/LegalEntities/DowJonesIndustrialAverageCompanies/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/LegalEntities/DowJonesIndustrialAverageExecutives/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/LegalEntities/FinancialInstitutionExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/LegalEntities/MetadataEXMPLegalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/MetadataEXMP/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/Securities/EquityIndexExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260601/Securities/MetadataEXMPSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260701/LegalEntities/MarketsAndExchangesExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260701/Securities/EquitiesExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/EXMP/20260701/Securities/IRSwapExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20230101/AllFBC-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20230101/DebtAndEquities/MetadataFBCDebtAndEquities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20230101/FinancialInstruments/MetadataFBCFinancialInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20230101/FunctionalEntities/NorthAmericanEntities/CAFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20230601/ProductsAndServices/MetadataFBCProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20250301/FinancialInstruments/Settlement/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20250301/FunctionalEntities/BusinessCenters/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20250301/FunctionalEntities/EuropeanEntities/EUFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20250401/DebtAndEquities/CreditEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20250701/FinancialInstruments/InstrumentPricing/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251001/AllFBC-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251001/AllFBC-EuropeAndNorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251001/AllFBC-NorthAmericanExamples/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251001/AllFBC-ReferenceMarkets/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251001/AllFBC/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251201/FinancialInstruments/FinancialInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251201/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20251201/FunctionalEntities/RegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260301/FunctionalEntities/FinancialServicesEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260401/MetadataFBC/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260601/AllFBC-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260601/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260601/FunctionalEntities/MetadataFBCFunctionalEntities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/DebtAndEquities/Debt/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/DebtAndEquities/Guaranty/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/BusinessCentersIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/BusinessRegistries/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/CommercialRegistrationAuthorities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/InternationalRegistriesAndAuthorities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/Markets/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/MarketsIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/ProductsAndServices/ClientsAndAccounts/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/20260701/ProductsAndServices/FinancialProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/DebtAndEquities/CreditRatings/",
+      "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/NorthAmericanEntities/USNationalInformationCenterControlledVocabularies/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/AgentsAndPeople/MetadataFNDAgentsAndPeople/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/Agreements/MetadataFNDAgreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/AllFND-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/DatesAndTimes/MetadataFNDDatesAndTimes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/GoalsAndObjectives/MetadataFNDGoalsAndObjectives/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/OwnershipAndControl/MetadataFNDOwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/ProductsAndServices/MetadataFNDProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/Relations/MetadataFNDRelations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/TransactionsExt/MetadataFNDTransactionsExt/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230101/Utilities/MetadataFNDUtilities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20230301/Arrangements/MetadataFNDArrangements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20231101/Arrangements/Arrangements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20231101/Arrangements/ClassificationSchemes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20231101/Utilities/AnnotationVocabulary/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/Arrangements/IdentifiersAndIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/Arrangements/Lifecycles/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/OwnershipAndControl/Control/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/OwnershipAndControl/OwnershipAndControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/OwnershipAndControl/TestControl/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20240101/OwnershipAndControl/TestOwnership/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20241101/MetadataFND/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20241101/Parties/MetadataFNDParties/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20241101/Utilities/Analytics/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250301/Arrangements/Assessments/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250301/Arrangements/Reporting/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250301/DatesAndTimes/Occurrences/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250301/Law/LegalCore/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250301/Parties/Parties/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250601/Accounting/MetadataFNDAccounting/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250701/DatesAndTimes/FinancialDates/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250701/ProductsAndServices/PaymentsAndSchedules/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20250801/Arrangements/Documents/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/DatesAndTimes/BusinessDates/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/GoalsAndObjectives/Objectives/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Law/LegalCapacity/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Law/MetadataFNDLaw/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Organizations/MetadataFNDOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Places/Facilities/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Places/MetadataFNDPlaces/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/Places/VirtualPlaces/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20251201/ProductsAndServices/ProductsAndServices/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260601/Agreements/Agreements/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260601/Agreements/Contracts/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Accounting/AccountingEquity/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Accounting/CurrencyAmount/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Accounting/ISO4217-CurrencyCodes/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/AgentsAndPeople/Agents/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/AgentsAndPeople/People/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/AllFND/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Arrangements/Ratings/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Organizations/FormalOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Organizations/TestFormalOrganizations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/OwnershipAndControl/Ownership/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Places/Addresses/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Places/NorthAmerica/USPostalServiceAddresses/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Places/NorthAmerica/USPostalServiceAddressesIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Places/RealProperty/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/20260701/Relations/Relations/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CashFlows/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/MarketTransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/REATransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/FND/TransactionsExt/SecuritiesTransactions/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/AllIND-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/AllIND-ReferenceRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/AllIND/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/EconomicIndicators/MetadataINDEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/ForeignExchange/MetadataINDForeignExchange/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/Indicators/MetadataINDIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/InterestRates/MetadataINDInterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20230201/MarketIndices/MetadataINDMarketIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250301/EconomicIndicators/NorthAmericanIndicators/CAEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250301/InterestRates/InterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250701/EconomicIndicators/EconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250701/ForeignExchange/ForeignExchange/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250701/Indicators/Indicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20250701/MarketIndices/BasketIndices/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20251001/EconomicIndicators/NorthAmericanIndicators/USEconomicIndicators/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20260401/MetadataIND/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20260601/InterestRates/CommonInterestRates/",
+      "https://spec.edmcouncil.org/fibo/ontology/IND/20260601/InterestRates/MarketDataProviders/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20230201/LoansGeneral/MetadataLOANLoansGeneral/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20241001/RealEstateLoans/MetadataLOANRealEstateLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20241101/LoansSpecific/MetadataLOANLoansSpecific/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20250301/LoansSpecific/CardAccounts/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20250301/LoansSpecific/CommercialLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20250301/LoansSpecific/ConsumerLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20250301/LoansSpecific/StudentLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20250301/RealEstateLoans/Mortgages/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20251201/LoansGeneral/Loans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20251201/LoansSpecific/GreenLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/20260401/MetadataLOAN/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/AllLOAN/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanApplications/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoanEvents/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansGeneral/LoansRegulatory/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/LoanProducts/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/LoansSpecific/MarineFinance/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/ConstructionLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/HomeMortgageDisclosureActCoveredMortgages/",
+      "https://spec.edmcouncil.org/fibo/ontology/LOAN/RealEstateLoans/MortgageOrigination/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/20230301/CIVTemporal/MetadataMDCIVTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/20230301/DebtTemporal/MetadataMDDebtTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/20230301/DerivativesTemporal/MetadataMDDerivativesTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/20230301/TemporalCore/MetadataMDTemporalCore/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/20260401/MetadataMD/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/CIVTemporal/FundsTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DebtTemporal/DebtAnalytics/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/ETOptionsTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/DerivativesTemporal/FuturesTemporal/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityCreditStatuses/",
+      "https://spec.edmcouncil.org/fibo/ontology/MD/TemporalCore/SecurityTradingStatuses/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20230201/Equities/MetadataSECEquities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20230201/Funds/MetadataSECFunds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20230301/Equities/DepositaryReceipts/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20240101/Debt/TradedShortTermDebt/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20240701/Securities/MetadataSECSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20241001/Debt/DebtInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20241101/AllSEC-Europe/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20241101/AllSEC-NorthAmerica/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20241101/AllSEC-ReferenceIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20241101/Debt/MetadataSECDebt/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250201/Securities/ParametricSchedules/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Debt/AssetBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Debt/ExerciseConventions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Debt/PoolBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Securities/EuropeanSecurities/EUSecuritiesRestrictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Securities/NorthAmericanSecurities/USSecuritiesRestrictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Securities/SecuritiesIdentification/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250301/Securities/SecuritiesRestrictions/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20250701/Securities/Baskets/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20251201/Debt/Bonds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20251201/Securities/SecuritiesListings/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260401/Funds/Funds/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260401/MetadataSEC/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260601/Securities/SecuritiesIdentificationIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/AllSEC/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Equities/EquityCFIClassificationIndividuals/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Equities/EquityInstruments/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Securities/Pools/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Securities/SecuritiesClassification/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Securities/SecuritiesIssuance/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/20260701/Securities/SecurityAssets/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/CollateralizedDebtObligations/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/DistributedLoans/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/MortgageBackedSecurities/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Debt/SyntheticCDOs/",
+      "https://spec.edmcouncil.org/fibo/ontology/SEC/Funds/CollectiveInvestmentVehicles/"
+    ],
+    "reasoning": "asserted",
+    "source_files": [
+      {
+        "bundle_path": "references/fibo/AboutFIBODev-TBoxOnly.rdf",
+        "format": "xml",
+        "path": "AboutFIBODev-TBoxOnly.rdf",
+        "sha256": "c1616ea76d51f1d68d65b77cb364f3644871a6f8458c63d8e91d8123f7c0d9b3"
+      },
+      {
+        "bundle_path": "references/fibo/AboutFIBODev.rdf",
+        "format": "xml",
+        "path": "AboutFIBODev.rdf",
+        "sha256": "78699716ae93dd31ad6f52763c3d3b00ecfb618eed3388056d4f279308c69780"
+      },
+      {
+        "bundle_path": "references/fibo/AboutFIBOProd-IncludingReferenceData.rdf",
+        "format": "xml",
+        "path": "AboutFIBOProd-IncludingReferenceData.rdf",
+        "sha256": "314b2875a2e429faea509e852fc56d3b6228a680f8290a04865c176e64e8563f"
+      },
+      {
+        "bundle_path": "references/fibo/AboutFIBOProd-TBoxOnly.rdf",
+        "format": "xml",
+        "path": "AboutFIBOProd-TBoxOnly.rdf",
+        "sha256": "b42a354e1f80aefb0d5de7d13897d442c073ecc3a674e05adeae2ae397e536cb"
+      },
+      {
+        "bundle_path": "references/fibo/AboutFIBOProd.rdf",
+        "format": "xml",
+        "path": "AboutFIBOProd.rdf",
+        "sha256": "21a44022103fb2a2245fff6e7eaa14e673585e13b9410444333105d35b24b0b0"
+      },
+      {
+        "bundle_path": "references/fibo/ACTUS/ACTUS-examples.ttl",
+        "format": "turtle",
+        "path": "ACTUS/ACTUS-examples.ttl",
+        "sha256": "8976cf1a7d315cf16fc5f2d4d363ed148187ec5026fa29f0527c560ff571f12f"
+      },
+      {
+        "bundle_path": "references/fibo/ACTUS/ACTUSContractTermMapping.rdf",
+        "format": "xml",
+        "path": "ACTUS/ACTUSContractTermMapping.rdf",
+        "sha256": "1ffe76217e0123653c8a4d03290dcfab352af9fe7a5cdb369ae0e86c55d11bbd"
+      },
+      {
+        "bundle_path": "references/fibo/ACTUS/ACTUSContractTerms.rdf",
+        "format": "xml",
+        "path": "ACTUS/ACTUSContractTerms.rdf",
+        "sha256": "693c1adb8cb72d5497fad9bf041c21f2b8c3852f8267b04a354a42a7ee38f986"
+      },
+      {
+        "bundle_path": "references/fibo/ACTUS/ACTUSTaxonomy.rdf",
+        "format": "xml",
+        "path": "ACTUS/ACTUSTaxonomy.rdf",
+        "sha256": "c715cd4f2e23f8986a6965786f676ee8eeea6c0496f96a0dd57306fe5907a24a"
+      },
+      {
+        "bundle_path": "references/fibo/ACTUS/MetadataACTUS.rdf",
+        "format": "xml",
+        "path": "ACTUS/MetadataACTUS.rdf",
+        "sha256": "760b6e4f0266e074b3d94547c7f256582c117481655ec1388a27277c387dc7f9"
+      },
+      {
+        "bundle_path": "references/fibo/BE/AllBE-Europe.rdf",
+        "format": "xml",
+        "path": "BE/AllBE-Europe.rdf",
+        "sha256": "9c32fb39230b6617d9a94e3873a297da5717946958d75443a414c78e60ad49ad"
+      },
+      {
+        "bundle_path": "references/fibo/BE/AllBE-NorthAmerica.rdf",
+        "format": "xml",
+        "path": "BE/AllBE-NorthAmerica.rdf",
+        "sha256": "a016a5aa7925d9cd2dcc963045e2cb947a9f726d0648489cf352a7053555a988"
+      },
+      {
+        "bundle_path": "references/fibo/BE/AllBE-ReferenceIndividuals.rdf",
+        "format": "xml",
+        "path": "BE/AllBE-ReferenceIndividuals.rdf",
+        "sha256": "d6ce7f1a0c614f647b771aed95512fa7251e9c4a7f4d4266cf08e38ae0c71d78"
+      },
+      {
+        "bundle_path": "references/fibo/BE/AllBE.rdf",
+        "format": "xml",
+        "path": "BE/AllBE.rdf",
+        "sha256": "9ce4eb1677f2fca4791b3427470f302450001eb93fc3ac6c41939a80a567a463"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Corporations/Corporations.rdf",
+        "format": "xml",
+        "path": "BE/Corporations/Corporations.rdf",
+        "sha256": "5b0f0804b9756805e1d0acc2ea9066854d1fa189a0bfae51c5392cead774157c"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Corporations/MetadataBECorporations.rdf",
+        "format": "xml",
+        "path": "BE/Corporations/MetadataBECorporations.rdf",
+        "sha256": "262a6ccaf6a1fd3b209566cd3d7a67ce9c8e04a97005039366871f6ee0d2b334"
+      },
+      {
+        "bundle_path": "references/fibo/BE/FunctionalEntities/FunctionalEntities.rdf",
+        "format": "xml",
+        "path": "BE/FunctionalEntities/FunctionalEntities.rdf",
+        "sha256": "1a60609b6ad170e85bb9424d06c7d8f740d0c98492e22a8c0c9e2e285ec47b5a"
+      },
+      {
+        "bundle_path": "references/fibo/BE/FunctionalEntities/MetadataBEFunctionalEntities.rdf",
+        "format": "xml",
+        "path": "BE/FunctionalEntities/MetadataBEFunctionalEntities.rdf",
+        "sha256": "31af1cef5f6f9a69788723bd1002453c9ee8801f1a389415d35fe55a520f19a3"
+      },
+      {
+        "bundle_path": "references/fibo/BE/FunctionalEntities/Publishers.rdf",
+        "format": "xml",
+        "path": "BE/FunctionalEntities/Publishers.rdf",
+        "sha256": "c08bba6665f5e8fa0f777c7625413d35aa10a63353e739c085127bbbe73c5d28"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/AsianJurisdiction/CentralAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/AsianJurisdiction/CentralAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "aee3d80efc70f5f47777f494e90a739d9d189957ab0cb27370c12d4c7820726d"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/AsianJurisdiction/EasternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/AsianJurisdiction/EasternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "b3457f1b1f708f6d42b9455bb6f58635222329f3205e1ed387cd6567e65a4022"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/AsianJurisdiction/SoutheasternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/AsianJurisdiction/SoutheasternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "d67d39a772cdeb7c6afc742123bb228edec654514465d1a7418644d9ffb9f505"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/AsianJurisdiction/SouthernAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/AsianJurisdiction/SouthernAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "b2a8a6faf8bb0c4d86201e390bc43671b0749eb101bd80f77ae3dbdbd7e54b02"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/AsianJurisdiction/WesternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/AsianJurisdiction/WesternAsiaGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "f9169b486ee9d2e86f2c2260a66b382c646f4841c33b1503ba8694c5c13ac677"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/EasternEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/EasternEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "c4cbaba3e0c54b715b852bd6eb57ac63a548664fa85295fedc1921bfe9274d5d"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/EUGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "1bb376f9954fa47a840b71599355b5350ca495a55a78a42999e0fe2bde270363"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/NorthernEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/NorthernEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "748495ae15ddafba39c5849a08369e32f658442c67068899050b9ba795c551f0"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/SouthernEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/SouthernEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "0b15464d31296b22286c7ac45eb501b22ffb5d27e8b5ca59c91697fec858d128"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/UKGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "5bad7494b9ac410bf4d30b9acc8d25d22b644e687e6d3dbb5f7c37dedbeefe45"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/EuropeanJurisdiction/WesternEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/EuropeanJurisdiction/WesternEuropeGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "b7b4101dd6ed6ef50d6317dfef9fe1f39c9c9b12ca5937f51c31c74aa58a53f6"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/GovernmentEntities.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/GovernmentEntities.rdf",
+        "sha256": "5deab1a75487a8f7ff902b567d86099df6c1e24acc1a3a06d0351785ed1d30d3"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/LatinAmericanJurisdiction/CentralAmericanGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/LatinAmericanJurisdiction/CentralAmericanGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "4ee33550ea3841f02db40f32b172e2e58a742a8d7daecba90b3c2a1874256429"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/LatinAmericanJurisdiction/SouthAmericanGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "69ccdcf1d4089b731389cff43cc154112e718dde1b259f5544e1661da77970a7"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/MetadataBEGovernmentEntities.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/MetadataBEGovernmentEntities.rdf",
+        "sha256": "55ba5b61da33ae4f6401b335a1343a7d3415f9268a94ed130911e68cd27ff0f4"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/NorthAmericanJurisdiction/CAGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/NorthAmericanJurisdiction/CAGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "407d12cc2db9c506ac67ff4a241a42f051bb9c38f48791f534652d6ea2f16f0b"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/NorthAmericanJurisdiction/CaribbeanGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/NorthAmericanJurisdiction/CaribbeanGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "60ecc4cd2a4d55954a9f980e186de5b7bf4785d998422061ff928db279448143"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/NorthAmericanJurisdiction/MXGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "4b7a67ea7cecf4149d178e602c46fb6f214ef4cf5ceb3431e36cb46c760916f1"
+      },
+      {
+        "bundle_path": "references/fibo/BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions.rdf",
+        "format": "xml",
+        "path": "BE/GovernmentEntities/NorthAmericanJurisdiction/USGovernmentEntitiesAndJurisdictions.rdf",
+        "sha256": "42205fd0664c2535036cff2d6c5bfbcf9a6ce4ad4cbae0af6910c63eac9f6bda"
+      },
+      {
+        "bundle_path": "references/fibo/BE/LegalEntities/CorporateBodies.rdf",
+        "format": "xml",
+        "path": "BE/LegalEntities/CorporateBodies.rdf",
+        "sha256": "6fa4a51dba5b2409b4becae9f17299d91b3fd0da0b7a4439f6c3888b6f1dd363"
+      },
+      {
+        "bundle_path": "references/fibo/BE/LegalEntities/FormalBusinessOrganizations.rdf",
+        "format": "xml",
+        "path": "BE/LegalEntities/FormalBusinessOrganizations.rdf",
+        "sha256": "9758af6c796f157eedb21d72cde0822cb7a2ecbd6b5a70ef23be48121c598ede"
+      },
+      {
+        "bundle_path": "references/fibo/BE/LegalEntities/LegalPersons.rdf",
+        "format": "xml",
+        "path": "BE/LegalEntities/LegalPersons.rdf",
+        "sha256": "5d6bb270b50e9a3b5bf8d32aa2448ba56a3e1b9880a137cb89b1bdb2d7811196"
+      },
+      {
+        "bundle_path": "references/fibo/BE/LegalEntities/LEIEntities.rdf",
+        "format": "xml",
+        "path": "BE/LegalEntities/LEIEntities.rdf",
+        "sha256": "535adad55c4f6fe3ad7131256c4a1602e8c4727fbef1a89c338de8d9559a4cca"
+      },
+      {
+        "bundle_path": "references/fibo/BE/LegalEntities/MetadataBELegalEntities.rdf",
+        "format": "xml",
+        "path": "BE/LegalEntities/MetadataBELegalEntities.rdf",
+        "sha256": "a756204952d29e1fb904ce20cc0b9c6cf9aa579c6861f84f0a3e0c3e5f032c17"
+      },
+      {
+        "bundle_path": "references/fibo/BE/MetadataBE.rdf",
+        "format": "xml",
+        "path": "BE/MetadataBE.rdf",
+        "sha256": "6e5ef42b2f573f74c3d530fd09ae95616e55f5e47237ad6f500669fb258cab09"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/ControlParties.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/ControlParties.rdf",
+        "sha256": "81ee03cff7bfd7e2f6e748c95bd2b9fc331c79b25135024086bfb943a8031ba1"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/CorporateControl.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/CorporateControl.rdf",
+        "sha256": "23da6b47b01ef29d26d5aa063b88cb62e44c676204d905b98e96322c216195ab"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/CorporateOwnership.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/CorporateOwnership.rdf",
+        "sha256": "4d1bc90c4583cdc3c4f8228a8afb505706731dd0d76b848f6678e714ee5ac147"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/Executives.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/Executives.rdf",
+        "sha256": "27c89de7b6ec909d26a0a73d1d2b7cbaadf425eb5e6a488f681cc3eba80f91ca"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/MetadataBEOwnershipAndControl.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/MetadataBEOwnershipAndControl.rdf",
+        "sha256": "3470b9b467f8f7d73d8d6c05a55355e61f2434c8472e412a6af6b74c9e42615f"
+      },
+      {
+        "bundle_path": "references/fibo/BE/OwnershipAndControl/OwnershipParties.rdf",
+        "format": "xml",
+        "path": "BE/OwnershipAndControl/OwnershipParties.rdf",
+        "sha256": "2b91fda366d3f3c717a0ba0367d0a26920e3e046b78d354a395c83e1fd36ba52"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Partnerships/MetadataBEPartnerships.rdf",
+        "format": "xml",
+        "path": "BE/Partnerships/MetadataBEPartnerships.rdf",
+        "sha256": "342c0bff05ebcc08f81fb089d1b078884392f88dfb7ea7f1b0a0c8600c595c2e"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Partnerships/Partnerships.rdf",
+        "format": "xml",
+        "path": "BE/Partnerships/Partnerships.rdf",
+        "sha256": "d8e7bd00bcec02116a8ba944082e7c83bd17338e42c9b9925e2ef483b7e1cacf"
+      },
+      {
+        "bundle_path": "references/fibo/BE/PrivateLimitedCompanies/MetadataBEPrivateLimitedCompanies.rdf",
+        "format": "xml",
+        "path": "BE/PrivateLimitedCompanies/MetadataBEPrivateLimitedCompanies.rdf",
+        "sha256": "32d70db294f234bfead017d7ee654db84dbed8adf28a32e3053ecb4f03cfa555"
+      },
+      {
+        "bundle_path": "references/fibo/BE/PrivateLimitedCompanies/PrivateLimitedCompanies.rdf",
+        "format": "xml",
+        "path": "BE/PrivateLimitedCompanies/PrivateLimitedCompanies.rdf",
+        "sha256": "ed254b1923d2aaa91861926940b56bbacc941588b902d6479417e85b06987c0d"
+      },
+      {
+        "bundle_path": "references/fibo/BE/SoleProprietorships/MetadataBESoleProprietorships.rdf",
+        "format": "xml",
+        "path": "BE/SoleProprietorships/MetadataBESoleProprietorships.rdf",
+        "sha256": "7e2a63c8ea68d1af38b367bea4013dd1fa8c0f391d7807dd79f1de98f8900d85"
+      },
+      {
+        "bundle_path": "references/fibo/BE/SoleProprietorships/SoleProprietorships.rdf",
+        "format": "xml",
+        "path": "BE/SoleProprietorships/SoleProprietorships.rdf",
+        "sha256": "84f58ed7419a3ea2c8e26947f96d11a0b14f06c5725024cf16ab63a68ce3c4ac"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Trusts/MetadataBETrusts.rdf",
+        "format": "xml",
+        "path": "BE/Trusts/MetadataBETrusts.rdf",
+        "sha256": "a910d7cec2268a569f26a1cbf2856a7ea1c6459aefd0e530aa0a62961d3f9094"
+      },
+      {
+        "bundle_path": "references/fibo/BE/Trusts/Trusts.rdf",
+        "format": "xml",
+        "path": "BE/Trusts/Trusts.rdf",
+        "sha256": "2a4049b46d7d8daeb24877203142458caefea7a26ad56d16d6dd69523f6a04f1"
+      },
+      {
+        "bundle_path": "references/fibo/BP/MetadataBP.rdf",
+        "format": "xml",
+        "path": "BP/MetadataBP.rdf",
+        "sha256": "baf045f4926f38451d412f3e6fa19bf0cfe399eb712e47c1cb31b6d364c91255"
+      },
+      {
+        "bundle_path": "references/fibo/BP/Process/FinancialContextAndProcess.rdf",
+        "format": "xml",
+        "path": "BP/Process/FinancialContextAndProcess.rdf",
+        "sha256": "0e9d52107c2c95399af0cae6beab257d8f221907647b9df5caa05d479e71785a"
+      },
+      {
+        "bundle_path": "references/fibo/BP/Process/MetadataBPProcess.rdf",
+        "format": "xml",
+        "path": "BP/Process/MetadataBPProcess.rdf",
+        "sha256": "e7d3371be5c5ff37576262aeb17216678d95a42021ce0858bb18747fa15cb072"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/AgencyMBSIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/AgencyMBSIssuance.rdf",
+        "sha256": "2eeca2019d428c47ac1513eaf8db629142182da83295878f53a62e84592f6a59"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/DebtIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/DebtIssuance.rdf",
+        "sha256": "560fdfbe3abab0e0bb6f417a8acec1661acf530aeee87d8a033ef11bbf4af57b"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/EquitiesIPOIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/EquitiesIPOIssuance.rdf",
+        "sha256": "fb4230f5b0812f53d30ce91b5b00a7d962d30b713eb159867935983fd6f7bbe7"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/IssuanceDocuments.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/IssuanceDocuments.rdf",
+        "sha256": "4c4b98a25292417c0cfa751a871d67e42ea9e85f29ea26acb47bf9860bbda08e"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/IssuanceProcess.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/IssuanceProcess.rdf",
+        "sha256": "fa20b53ed283631237b4ff106a6a421d47c8e9bcb760277569287fb0cabdce1f"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/MBSIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/MBSIssuance.rdf",
+        "sha256": "98ae1fbc1c6325c22ec32be6fe2c3b1c11bf20f64ae80d0087c27a7f332d20f1"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/MetadataBPSecuritiesIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/MetadataBPSecuritiesIssuance.rdf",
+        "sha256": "84d997a1a32343a96e9a01cf043136df8d8daa10d6267a530e6cfbd7e5e4fe0e"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/MuniIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/MuniIssuance.rdf",
+        "sha256": "1c106070e511dce04ec6498cc5a5df3f6dba9e882ef25649d5ada289a93e628f"
+      },
+      {
+        "bundle_path": "references/fibo/BP/SecuritiesIssuance/PrivateLabelMBSIssuance.rdf",
+        "format": "xml",
+        "path": "BP/SecuritiesIssuance/PrivateLabelMBSIssuance.rdf",
+        "sha256": "edaa40050a1b847b1cdce90ef56ea2055f56bb1c63d8a51420f5423ce3efce89"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/AllCAE.rdf",
+        "format": "xml",
+        "path": "CAE/AllCAE.rdf",
+        "sha256": "f5787e78b103f21dbcc7822a1a1ab8370426e9d82347877f44118760be7062b1"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/CorporateEvents/CorporateActions.rdf",
+        "format": "xml",
+        "path": "CAE/CorporateEvents/CorporateActions.rdf",
+        "sha256": "54455443d756001807a44fb86449f950a37301ed0646079052aa300d4b315193"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/CorporateEvents/GLEIF-CorporateActionIndividuals.rdf",
+        "format": "xml",
+        "path": "CAE/CorporateEvents/GLEIF-CorporateActionIndividuals.rdf",
+        "sha256": "7606bb41f72dc98e8e5f1d4b5c970686f1a3473c0e6baee42ec320289773c087"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/CorporateEvents/ISO15022-CorporateActionIndividuals.rdf",
+        "format": "xml",
+        "path": "CAE/CorporateEvents/ISO15022-CorporateActionIndividuals.rdf",
+        "sha256": "0762902f25fdb491abe0a062189a2924297c4e4fee1441b3df3f3afff5e1fd27"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/CorporateEvents/MetadataCAECorporateEvents.rdf",
+        "format": "xml",
+        "path": "CAE/CorporateEvents/MetadataCAECorporateEvents.rdf",
+        "sha256": "3aa1dff9050639efd3ac49059e87e76af8c35cc84449f67a502eac62fed41c1b"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/CorporateEvents/SecurityRelatedCorporateActions.rdf",
+        "format": "xml",
+        "path": "CAE/CorporateEvents/SecurityRelatedCorporateActions.rdf",
+        "sha256": "690895114a0787da52d8b7a7d29be50450d25041659e04b33e16f727ba350a92"
+      },
+      {
+        "bundle_path": "references/fibo/CAE/MetadataCAE.rdf",
+        "format": "xml",
+        "path": "CAE/MetadataCAE.rdf",
+        "sha256": "8fabfebf296a8a8126a0c921ff486da2037f0b8c66931162ddea0ada3d87d106"
+      },
+      {
+        "bundle_path": "references/fibo/DER/AllDER-ReferenceIndividuals.rdf",
+        "format": "xml",
+        "path": "DER/AllDER-ReferenceIndividuals.rdf",
+        "sha256": "a7351ad933a0eda2172daa5572e4bd4ccdb4e1eb7cce6861f5020940d5d34102"
+      },
+      {
+        "bundle_path": "references/fibo/DER/AllDER.rdf",
+        "format": "xml",
+        "path": "DER/AllDER.rdf",
+        "sha256": "2656f53346046a35a9d52153b9295bd78fda5adc3b5ed50147a5c24d42ed0e6f"
+      },
+      {
+        "bundle_path": "references/fibo/DER/CreditDerivatives/CreditDefaultSwaps.rdf",
+        "format": "xml",
+        "path": "DER/CreditDerivatives/CreditDefaultSwaps.rdf",
+        "sha256": "e4f8942a4f125b0417240813e72a1c570b85cedb764dc5b88ed0663322233d4f"
+      },
+      {
+        "bundle_path": "references/fibo/DER/CreditDerivatives/MetadataDERCreditDerivatives.rdf",
+        "format": "xml",
+        "path": "DER/CreditDerivatives/MetadataDERCreditDerivatives.rdf",
+        "sha256": "f482008a9e7aea7ecf9c9b14f9d8608dff3f17423b194d06e1df3f51eae77920"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/CommoditiesContracts.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/CommoditiesContracts.rdf",
+        "sha256": "e460829ab039670f9e06a5e2f7c8a0435a5c7529015e0dbe7a9a790464504bd8"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/CurrencyContracts.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/CurrencyContracts.rdf",
+        "sha256": "55979b6e85df3bd160e3c7ee545150e0b7c51792cecce55f507c06ba9978e0b6"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/DerivativesBasics.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/DerivativesBasics.rdf",
+        "sha256": "1d46ff62ed97b1b5c5efb22344dc4a795f3a38a6a7c8d99e40c825cc75a891cb"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/DerivativesMasterAgreements.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/DerivativesMasterAgreements.rdf",
+        "sha256": "d9f057f57c2fbab0f06a73b8281b7d476e79c36502bb7a47cc8b00f51ec459d2"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/ExoticOptions.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/ExoticOptions.rdf",
+        "sha256": "b365451719be659b75e34160f67826d1fecf4db25c0e9fcfd80a2aae7ce02aa5"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/FuturesAndForwards.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/FuturesAndForwards.rdf",
+        "sha256": "4932191e9cdfb6ce62af4c9077f0e5e184cf60c8a969d4a7166b65bf658bce7f"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/MetadataDERDerivativesContracts.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/MetadataDERDerivativesContracts.rdf",
+        "sha256": "85bb87d2f3e71539bec7f5364efc262926edfbec727320ca0f770a29d724e669"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/Options.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/Options.rdf",
+        "sha256": "3e67c374be7e2c644c596d83a2efadb08b8ed189c20644396891cf12b1f37d30"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/RightsAndWarrants.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/RightsAndWarrants.rdf",
+        "sha256": "a0aea9b36bb60a086c8893ea282e5892663626e9fa136bc320592582d9e598d5"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/StructuredInstruments.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/StructuredInstruments.rdf",
+        "sha256": "f101284000f80ad62d6b30da2f30f5164a9c17d7d55e9b39057d1f085910aa9a"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/Swaps.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/Swaps.rdf",
+        "sha256": "d5b3b6ccbce15ed5522f2c15fde90c8b79ec7a3de33e9b48a80f97f106582966"
+      },
+      {
+        "bundle_path": "references/fibo/DER/DerivativesContracts/SwapsIndividuals.rdf",
+        "format": "xml",
+        "path": "DER/DerivativesContracts/SwapsIndividuals.rdf",
+        "sha256": "2b1a72c3a1db9285b93e97db0ac5f55555a206893741495827272209f11ad849"
+      },
+      {
+        "bundle_path": "references/fibo/DER/MetadataDER.rdf",
+        "format": "xml",
+        "path": "DER/MetadataDER.rdf",
+        "sha256": "7a62329d398f73701fbd5b04fbfe70bf7105063ad556bb004c309587f041de36"
+      },
+      {
+        "bundle_path": "references/fibo/DER/RateDerivatives/IRSwaps.rdf",
+        "format": "xml",
+        "path": "DER/RateDerivatives/IRSwaps.rdf",
+        "sha256": "5fb9294d27a8bae5230636202cd53bbfbe286fe95b2a2f1cd10e504966176791"
+      },
+      {
+        "bundle_path": "references/fibo/DER/RateDerivatives/MetadataDERRateDerivatives.rdf",
+        "format": "xml",
+        "path": "DER/RateDerivatives/MetadataDERRateDerivatives.rdf",
+        "sha256": "67c47af51c7a785b8053316024969928d26977005ae4d6d24271433a71b4dfde"
+      },
+      {
+        "bundle_path": "references/fibo/DER/RateDerivatives/RateDerivatives.rdf",
+        "format": "xml",
+        "path": "DER/RateDerivatives/RateDerivatives.rdf",
+        "sha256": "2fb3ec12b8d9df43db981281e1b2d797aabc54c1b8a9387e4c4b456c709f477d"
+      },
+      {
+        "bundle_path": "references/fibo/DER/SecurityBasedDerivatives/EquitySwaps.rdf",
+        "format": "xml",
+        "path": "DER/SecurityBasedDerivatives/EquitySwaps.rdf",
+        "sha256": "0de295c2e7121e0f239ed4c7af84d3182c2c493f2ce6423e02b915331e8a53bb"
+      },
+      {
+        "bundle_path": "references/fibo/DER/SecurityBasedDerivatives/MetadataDERSecurityBasedDerivatives.rdf",
+        "format": "xml",
+        "path": "DER/SecurityBasedDerivatives/MetadataDERSecurityBasedDerivatives.rdf",
+        "sha256": "560b408a34bf70058c5e997e24a3f0312f35ddda91f86ec3e5a71d38021c0044"
+      },
+      {
+        "bundle_path": "references/fibo/DER/SecurityBasedDerivatives/SecurityBasedDerivatives.rdf",
+        "format": "xml",
+        "path": "DER/SecurityBasedDerivatives/SecurityBasedDerivatives.rdf",
+        "sha256": "e409c614fa05cf3a92ef2ffb652008525612be13fc2347acd6b082fe0f4dc330"
+      },
+      {
+        "bundle_path": "references/fibo/etc/testing/data/fnd/Organizations/TestFormalOrganizations.rdf",
+        "format": "xml",
+        "path": "etc/testing/data/fnd/Organizations/TestFormalOrganizations.rdf",
+        "sha256": "551bd52f50a8c2167cf3054686869d6e0eb5fd5f1052d50778142fed224aedb8"
+      },
+      {
+        "bundle_path": "references/fibo/etc/testing/data/fnd/OwnershipAndControl/TestControl.rdf",
+        "format": "xml",
+        "path": "etc/testing/data/fnd/OwnershipAndControl/TestControl.rdf",
+        "sha256": "267ef337b05b30bec2b788b9cf8cd19e1c4d21c4862199a4afe6f6fb1a9a52e5"
+      },
+      {
+        "bundle_path": "references/fibo/etc/testing/data/fnd/OwnershipAndControl/TestOwnership.rdf",
+        "format": "xml",
+        "path": "etc/testing/data/fnd/OwnershipAndControl/TestOwnership.rdf",
+        "sha256": "d381703924cd9fb7fe4cb737ed4ef5b3da4e2091acfcf4fb7369bc7d4888bf31"
+      },
+      {
+        "bundle_path": "references/fibo/etc/vocabulary/scaffolding.ttl",
+        "format": "turtle",
+        "path": "etc/vocabulary/scaffolding.ttl",
+        "sha256": "1923c6ee728d14138174b70c66b4536f756cfd1fde9bbb66ef64b5d738b0fe53"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/LegalEntities/DowJonesIndustrialAverageCompanies.rdf",
+        "format": "xml",
+        "path": "EXMP/LegalEntities/DowJonesIndustrialAverageCompanies.rdf",
+        "sha256": "c4494877893c93f9a616fa9cf3906eba0fb6c3a876878b1cdb60c40b3044436d"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/LegalEntities/DowJonesIndustrialAverageExecutives.rdf",
+        "format": "xml",
+        "path": "EXMP/LegalEntities/DowJonesIndustrialAverageExecutives.rdf",
+        "sha256": "51ba47ba5b94ad9204274ed4ea152485790e034948d0088f33c2fe854c585fbd"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/LegalEntities/FinancialInstitutionExamples.rdf",
+        "format": "xml",
+        "path": "EXMP/LegalEntities/FinancialInstitutionExamples.rdf",
+        "sha256": "6ff400fc7d0d754db2229aaf69c84fc1cd792e55a497f9e3299ad0a0c42433f7"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/LegalEntities/MarketsAndExchangesExamples.rdf",
+        "format": "xml",
+        "path": "EXMP/LegalEntities/MarketsAndExchangesExamples.rdf",
+        "sha256": "7c3670c0b01b44daf9d230ebaa0d7ca05831ee5103d2f94eabe7f3b40573ffd1"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/LegalEntities/MetadataEXMPLegalEntities.rdf",
+        "format": "xml",
+        "path": "EXMP/LegalEntities/MetadataEXMPLegalEntities.rdf",
+        "sha256": "4fe84795e85e0a08e623558f47610fadc94114ccd51b6dc5b46fa0b439f4f37c"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/MetadataEXMP.rdf",
+        "format": "xml",
+        "path": "EXMP/MetadataEXMP.rdf",
+        "sha256": "923259c8a1918a3ac0de1bedb1476fb42c56555f5a432942264db7040b02340c"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/Securities/EquitiesExamples.rdf",
+        "format": "xml",
+        "path": "EXMP/Securities/EquitiesExamples.rdf",
+        "sha256": "67472951eda4ab333ca860aff880574f4629454478bbf8d10154cde935dfb619"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/Securities/EquityIndexExamples.rdf",
+        "format": "xml",
+        "path": "EXMP/Securities/EquityIndexExamples.rdf",
+        "sha256": "c9fb5c672cbb6dc4ba551074dd33b7e27294259b5a24a6064670bc5c0205149d"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/Securities/IRSwapExamples.rdf",
+        "format": "xml",
+        "path": "EXMP/Securities/IRSwapExamples.rdf",
+        "sha256": "dbb6868e124bba0f62a80f6387c9e212e8d2931ed572f2e411e31534e2edcfc5"
+      },
+      {
+        "bundle_path": "references/fibo/EXMP/Securities/MetadataEXMPSecurities.rdf",
+        "format": "xml",
+        "path": "EXMP/Securities/MetadataEXMPSecurities.rdf",
+        "sha256": "16c96f2700e91efd1812034fc313dcf84f74b9d4c4e8868b49e4287a48c94988"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-Europe.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-Europe.rdf",
+        "sha256": "da80568e2604f55e6c2bf63d847f0177d070e2bde011f8d38aa456d0c026abe6"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-EuropeAndNorthAmerica.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-EuropeAndNorthAmerica.rdf",
+        "sha256": "7c26145f11fd3ffb1371f0d0d208a53b98a37036a7c8fd16fcb5ec5014c21730"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-NorthAmerica.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-NorthAmerica.rdf",
+        "sha256": "22447158a8a1de0dbd01ac658028c2d2432482f0a36e196edbc48153bccc9d0b"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-NorthAmericanExamples.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-NorthAmericanExamples.rdf",
+        "sha256": "93055f5217062dd473f0617bfef9d20e97d1b300b203e4c92b85d375534c864d"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-ReferenceIndividuals.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-ReferenceIndividuals.rdf",
+        "sha256": "5a8d7a0a3c9ada858667d1e87591a2e56b8cd981d78b8ee7a5d6b7eb7339ae31"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC-ReferenceMarkets.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC-ReferenceMarkets.rdf",
+        "sha256": "495271a700db6c3e5c6f2534bdd2534f65487d43d488cd11bd880f8045e968fd"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/AllFBC.rdf",
+        "format": "xml",
+        "path": "FBC/AllFBC.rdf",
+        "sha256": "e3532d66123e9323c4f9f08c2531780cbfb75d1b1c439f47f5f88c0708a6fcd1"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/DebtAndEquities/CreditEvents.rdf",
+        "format": "xml",
+        "path": "FBC/DebtAndEquities/CreditEvents.rdf",
+        "sha256": "bc069e913f78f120d461cf77899be0452acda5d5786c9cd342e37931a2b141c6"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/DebtAndEquities/CreditRatings.rdf",
+        "format": "xml",
+        "path": "FBC/DebtAndEquities/CreditRatings.rdf",
+        "sha256": "1f582cd28aa6fc7dddfffeabef7c4aed9e4a1274b09047548096bd1769f759b7"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/DebtAndEquities/Debt.rdf",
+        "format": "xml",
+        "path": "FBC/DebtAndEquities/Debt.rdf",
+        "sha256": "e2887b268b4dc9b6c97cf4faa75dafc5e376289f985731b0f89fa10d3254eb07"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/DebtAndEquities/Guaranty.rdf",
+        "format": "xml",
+        "path": "FBC/DebtAndEquities/Guaranty.rdf",
+        "sha256": "a6bc9592eeebb061e99b2dc168751d4b3612dbcc32c86c50959e17011e4247b0"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/DebtAndEquities/MetadataFBCDebtAndEquities.rdf",
+        "format": "xml",
+        "path": "FBC/DebtAndEquities/MetadataFBCDebtAndEquities.rdf",
+        "sha256": "04c9d06d2a6357a3dfdf740b3f3a32afe66f3f1630028a02def2547acc3978d0"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FinancialInstruments/FinancialInstruments.rdf",
+        "format": "xml",
+        "path": "FBC/FinancialInstruments/FinancialInstruments.rdf",
+        "sha256": "b40f618e3feb2ca2bdd67c28d622728874d183b83fab1c57f77493cd81da088c"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FinancialInstruments/InstrumentPricing.rdf",
+        "format": "xml",
+        "path": "FBC/FinancialInstruments/InstrumentPricing.rdf",
+        "sha256": "363d3003839bfabc03c9cf49c9cb072f37bff4ffe33009879175986c6719cb71"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FinancialInstruments/MetadataFBCFinancialInstruments.rdf",
+        "format": "xml",
+        "path": "FBC/FinancialInstruments/MetadataFBCFinancialInstruments.rdf",
+        "sha256": "32687c553c00030d3ff4f92d6430808a33db8eb3301a1ea041bc16ded46cce5f"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FinancialInstruments/Settlement.rdf",
+        "format": "xml",
+        "path": "FBC/FinancialInstruments/Settlement.rdf",
+        "sha256": "89377f435ce3f9d5ae76a4c2bf85b0591df9c10d237d0a2ca9700d9da0c4da5c"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/BusinessCenters.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/BusinessCenters.rdf",
+        "sha256": "9bbbd18083fbf3183af8c86eb613aa661a0110b3c02acb42c40459b17aaefe20"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/BusinessCentersIndividuals.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/BusinessCentersIndividuals.rdf",
+        "sha256": "74c2596e5c6a609f06679075ea9860e029104da19ca44ff2cc7aa98d68358bfd"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/BusinessRegistries.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/BusinessRegistries.rdf",
+        "sha256": "fdadb56cd346c7f354007b53bb21e21e35b8d83160f45c626d0f675b7b14754d"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/CommercialRegistrationAuthorities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/CommercialRegistrationAuthorities.rdf",
+        "sha256": "7fb80db6c9bf1521e4fd15a83716ed1dd7131e04cc3eab330d443c2f46cfa2aa"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/EuropeanEntities/EUFinancialServicesEntities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/EuropeanEntities/EUFinancialServicesEntities.rdf",
+        "sha256": "760f05a8322c75aaef31b7b35eefe1470b4bd58ea40a9be94100e8fe641fce43"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/EuropeanEntities/EURegulatoryAgencies.rdf",
+        "sha256": "ae4bf1d8430cf5c1d1d6e3b5004b20bc4d4e330a4cc094c02e2880e7bd06fd6f"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/EuropeanEntities/EuropeanFinancialServicesEntitiesIndividuals.rdf",
+        "sha256": "c6f66c20024b1d09a0652a20ac7fe44d7b482e1072b9d1507a1eacceb23ff539"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/FinancialServicesEntities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/FinancialServicesEntities.rdf",
+        "sha256": "6e6990f74b40d4b0500a945cb9492927f845764329794290952c527016de49c1"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/InternationalRegistriesAndAuthorities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/InternationalRegistriesAndAuthorities.rdf",
+        "sha256": "d14b800bd938a398e868a20a11492151de2fb2a6eb6133acfcd68ecbd3889c65"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/Markets.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/Markets.rdf",
+        "sha256": "c0249893617f6c64fb6b454763bcddfb73748067a0ae183e40b432e03fde24bf"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/MarketsIndividuals.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/MarketsIndividuals.rdf",
+        "sha256": "09daeb6fa0d1d7053970baed4bb58f7b0ef2d718a1cc5c800e2db6a88e94fb00"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/MetadataFBCFunctionalEntities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/MetadataFBCFunctionalEntities.rdf",
+        "sha256": "edad8a35728a53c2660aa4e460b03a47aa281b791207931b6ff20da7cfa34e45"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/NorthAmericanEntities/CAFinancialServicesEntities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/NorthAmericanEntities/CAFinancialServicesEntities.rdf",
+        "sha256": "71b2e78204a9772413bd836fdb53f48c80c90c1e195e3be33ffd7dda62399d1e"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/NorthAmericanEntities/CARegulatoryAgencies.rdf",
+        "sha256": "3a86c5f7dd7acfa3d8ca47686faffd64ac5f85eae9e50730e1337823edbfcda4"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/NorthAmericanEntities/USFinancialServicesEntities.rdf",
+        "sha256": "d9bfee9a3294cc99a3ff7688e325d68a9cc2158ec209ffd10a9a8e411af37f33"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/NorthAmericanEntities/USNationalInformationCenterControlledVocabularies.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/NorthAmericanEntities/USNationalInformationCenterControlledVocabularies.rdf",
+        "sha256": "ec9acb82235dfc421e0f84c8e1eeab8d4593b678b5339868d9cf247161f7283c"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/NorthAmericanEntities/USRegulatoryAgencies.rdf",
+        "sha256": "de74203ca3e67fe717b4f2da9cb381abdc316f91968b3e36439872a1a684d25f"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/FunctionalEntities/RegulatoryAgencies.rdf",
+        "format": "xml",
+        "path": "FBC/FunctionalEntities/RegulatoryAgencies.rdf",
+        "sha256": "ef717d20cc3804b8cc9643a625bf716211db11cc374a524b54dd5ce7e70bf1db"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/MetadataFBC.rdf",
+        "format": "xml",
+        "path": "FBC/MetadataFBC.rdf",
+        "sha256": "ff837ced8fa0e353155df976224dd0b76ec9001df809212d1473f0c8a09efc91"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/ProductsAndServices/ClientsAndAccounts.rdf",
+        "format": "xml",
+        "path": "FBC/ProductsAndServices/ClientsAndAccounts.rdf",
+        "sha256": "482b0902cf20a3e1d57ebf2e63481513a501ece098a0e4ff00ac78ae9ff430dc"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/ProductsAndServices/FinancialProductsAndServices.rdf",
+        "format": "xml",
+        "path": "FBC/ProductsAndServices/FinancialProductsAndServices.rdf",
+        "sha256": "4fc675338a28c5419555e56e545b4aa6b0686d14777b4b852624b166d585b5ca"
+      },
+      {
+        "bundle_path": "references/fibo/FBC/ProductsAndServices/MetadataFBCProductsAndServices.rdf",
+        "format": "xml",
+        "path": "FBC/ProductsAndServices/MetadataFBCProductsAndServices.rdf",
+        "sha256": "e33fb51c6351b8837299e6f911a3509c0ebbe89e802e4dd87a13f21f1cff8138"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Accounting/AccountingEquity.rdf",
+        "format": "xml",
+        "path": "FND/Accounting/AccountingEquity.rdf",
+        "sha256": "7cd2615fdde64d9064cd66e02f88718bb214bdc1cf57acc98f85a6355d01fdb8"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Accounting/CashFlows.rdf",
+        "format": "xml",
+        "path": "FND/Accounting/CashFlows.rdf",
+        "sha256": "11f30e320a47607eb0377d4c97d55d7f8607ad5ba323af00057df476c78573e2"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Accounting/CurrencyAmount.rdf",
+        "format": "xml",
+        "path": "FND/Accounting/CurrencyAmount.rdf",
+        "sha256": "4355744519e448cbeeedd0e9601a43470dc1329a7cab73d807e7b99048db0032"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Accounting/ISO4217-CurrencyCodes.rdf",
+        "format": "xml",
+        "path": "FND/Accounting/ISO4217-CurrencyCodes.rdf",
+        "sha256": "4a323fa7336e398c312a7f8afc057b57c4a92078063cdd27a8ff11fc1fe0d60c"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Accounting/MetadataFNDAccounting.rdf",
+        "format": "xml",
+        "path": "FND/Accounting/MetadataFNDAccounting.rdf",
+        "sha256": "79fcf685998a14463a2eeda63caf0676693ed21a6014362264a40b34597285f4"
+      },
+      {
+        "bundle_path": "references/fibo/FND/AgentsAndPeople/Agents.rdf",
+        "format": "xml",
+        "path": "FND/AgentsAndPeople/Agents.rdf",
+        "sha256": "324abaa4df302ba2a4ce097de0ff752a9da0261301868faf9b36c7cc4577e4af"
+      },
+      {
+        "bundle_path": "references/fibo/FND/AgentsAndPeople/MetadataFNDAgentsAndPeople.rdf",
+        "format": "xml",
+        "path": "FND/AgentsAndPeople/MetadataFNDAgentsAndPeople.rdf",
+        "sha256": "f9d8afdbc92c61b611cc44cc1e35b2955542602332e68dd235858e6a5bc83d5c"
+      },
+      {
+        "bundle_path": "references/fibo/FND/AgentsAndPeople/People.rdf",
+        "format": "xml",
+        "path": "FND/AgentsAndPeople/People.rdf",
+        "sha256": "ad5313f34d5a14c86455f952c2daeb486e6560ce3168a66d7e1c262b492c22ae"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Agreements/Agreements.rdf",
+        "format": "xml",
+        "path": "FND/Agreements/Agreements.rdf",
+        "sha256": "e7ad375c83c6ea909be45886e03aec3dd509a8c794a40149ee25f56176cbee08"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Agreements/Contracts.rdf",
+        "format": "xml",
+        "path": "FND/Agreements/Contracts.rdf",
+        "sha256": "310cd83e5e80f369e3f18c0a064ecf0f9519dae374fd89af25778d1089321ed8"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Agreements/MetadataFNDAgreements.rdf",
+        "format": "xml",
+        "path": "FND/Agreements/MetadataFNDAgreements.rdf",
+        "sha256": "b5883c4c6704a8b48c411647113eeafc5d9a1e8e48abeb6d028ec8cdeda9e91a"
+      },
+      {
+        "bundle_path": "references/fibo/FND/AllFND-NorthAmerica.rdf",
+        "format": "xml",
+        "path": "FND/AllFND-NorthAmerica.rdf",
+        "sha256": "0f3142bce7e03962ed957495b6637f19d1a092402c5b074066ffcad17d9a0704"
+      },
+      {
+        "bundle_path": "references/fibo/FND/AllFND.rdf",
+        "format": "xml",
+        "path": "FND/AllFND.rdf",
+        "sha256": "90d8b7ff527a736a1b76d2b7175a2b8f46fc8b0bf6375dcd6575a0867e35429e"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Arrangements.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Arrangements.rdf",
+        "sha256": "40d4a97d42efcf7a35be65975208192604f5ce601e40c41ef201dc2032c9eb79"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Assessments.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Assessments.rdf",
+        "sha256": "eb1f5d06ccbc0219cb924563f264d0880520c4f7d39ebe73e07d76ad440c2913"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/ClassificationSchemes.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/ClassificationSchemes.rdf",
+        "sha256": "7338de61776faa661146c3b44c6902fc98da670de604e69439fae05577135627"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Documents.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Documents.rdf",
+        "sha256": "2c96776dff29d1955d3d578e07bfed955f6c287acc775b1159190f62e9d82ef3"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/IdentifiersAndIndices.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/IdentifiersAndIndices.rdf",
+        "sha256": "2943e244c9f1e05582f4cd0ce73c69f5f8a148d740aa66d458c621a1ad24f51c"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Lifecycles.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Lifecycles.rdf",
+        "sha256": "92efc72f29aba7c64208722174530078a5a46ad575d7ceabbf0cd9a444ad5e0e"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/MetadataFNDArrangements.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/MetadataFNDArrangements.rdf",
+        "sha256": "a908e329ad3979678e1bcf8fbc32fa1ad7578a3d133a766a4a1cc95c0a477aaf"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Ratings.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Ratings.rdf",
+        "sha256": "7c2fc71488bd4a404f2e849642c58fd6f6f98a8d7814d532f2ebdae686174802"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Arrangements/Reporting.rdf",
+        "format": "xml",
+        "path": "FND/Arrangements/Reporting.rdf",
+        "sha256": "a52060e8b187a3f08302027cf7c7be15c9b644d9a3a7105f69a6415913db5143"
+      },
+      {
+        "bundle_path": "references/fibo/FND/DatesAndTimes/BusinessDates.rdf",
+        "format": "xml",
+        "path": "FND/DatesAndTimes/BusinessDates.rdf",
+        "sha256": "7e287b0092247d35e3e8e12b9c1c29cba3b2b4f94d06a6b0c06e85f6c1cc2f62"
+      },
+      {
+        "bundle_path": "references/fibo/FND/DatesAndTimes/FinancialDates.rdf",
+        "format": "xml",
+        "path": "FND/DatesAndTimes/FinancialDates.rdf",
+        "sha256": "73e38ccf5b6081418aadb03212ccfec6d41de52fcce9c10aa5bc6533c41498b9"
+      },
+      {
+        "bundle_path": "references/fibo/FND/DatesAndTimes/MetadataFNDDatesAndTimes.rdf",
+        "format": "xml",
+        "path": "FND/DatesAndTimes/MetadataFNDDatesAndTimes.rdf",
+        "sha256": "91483c02e4947f2ec3486e87adf2292155ba19e5965a818b52aa252c20415150"
+      },
+      {
+        "bundle_path": "references/fibo/FND/DatesAndTimes/Occurrences.rdf",
+        "format": "xml",
+        "path": "FND/DatesAndTimes/Occurrences.rdf",
+        "sha256": "406cc745cc7d791f79c22e8e117f06460564cc81d90a6349ea20adeb5766198c"
+      },
+      {
+        "bundle_path": "references/fibo/FND/GoalsAndObjectives/MetadataFNDGoalsAndObjectives.rdf",
+        "format": "xml",
+        "path": "FND/GoalsAndObjectives/MetadataFNDGoalsAndObjectives.rdf",
+        "sha256": "fd1d43a535f5c5184064889aca0cca5ffa06af8e9a96a629f8bd1f9696787f91"
+      },
+      {
+        "bundle_path": "references/fibo/FND/GoalsAndObjectives/Objectives.rdf",
+        "format": "xml",
+        "path": "FND/GoalsAndObjectives/Objectives.rdf",
+        "sha256": "f0b2e962552cee4f3cce3b136e48393e8ca4cae011a4c4cb80f887f6030a97a4"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Law/LegalCapacity.rdf",
+        "format": "xml",
+        "path": "FND/Law/LegalCapacity.rdf",
+        "sha256": "544b6eb4c7d0acd6efdeb794a9af17ec89bec5145b178192396defaa50bbef22"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Law/LegalCore.rdf",
+        "format": "xml",
+        "path": "FND/Law/LegalCore.rdf",
+        "sha256": "31fe191c06f11a104ba752303784bfd17673c9e515a6e3d3ed538b19a5da37e9"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Law/MetadataFNDLaw.rdf",
+        "format": "xml",
+        "path": "FND/Law/MetadataFNDLaw.rdf",
+        "sha256": "2ee076ca96458251633d718fd7aa2b7554ed183551e46d4dfdb6cdf9fbeeb80e"
+      },
+      {
+        "bundle_path": "references/fibo/FND/MetadataFND.rdf",
+        "format": "xml",
+        "path": "FND/MetadataFND.rdf",
+        "sha256": "5db9cc7472764beb77706d9e8c91674e0ce35e32f094288036fd072b872b0819"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Organizations/FormalOrganizations.rdf",
+        "format": "xml",
+        "path": "FND/Organizations/FormalOrganizations.rdf",
+        "sha256": "aa59b20c83dd0996c31db301142a4e02ff283400d1609f21b5b9904d450c717b"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Organizations/MetadataFNDOrganizations.rdf",
+        "format": "xml",
+        "path": "FND/Organizations/MetadataFNDOrganizations.rdf",
+        "sha256": "378c802a141a91f96e024fc58860da39a68698d016126896590f5772f0dbccd1"
+      },
+      {
+        "bundle_path": "references/fibo/FND/OwnershipAndControl/Control.rdf",
+        "format": "xml",
+        "path": "FND/OwnershipAndControl/Control.rdf",
+        "sha256": "b62f5055c539290530c387d27526ed613d4570b7c04105acfa6a5bc91f8e7569"
+      },
+      {
+        "bundle_path": "references/fibo/FND/OwnershipAndControl/MetadataFNDOwnershipAndControl.rdf",
+        "format": "xml",
+        "path": "FND/OwnershipAndControl/MetadataFNDOwnershipAndControl.rdf",
+        "sha256": "5b40504b9ef9bfc02f37e725510cb4e072856cf76bbc657659081a09f9caf5cc"
+      },
+      {
+        "bundle_path": "references/fibo/FND/OwnershipAndControl/Ownership.rdf",
+        "format": "xml",
+        "path": "FND/OwnershipAndControl/Ownership.rdf",
+        "sha256": "de57f166a681de4546904cb9a49d26917586e61cebb91ca017cc3bda8df3a305"
+      },
+      {
+        "bundle_path": "references/fibo/FND/OwnershipAndControl/OwnershipAndControl.rdf",
+        "format": "xml",
+        "path": "FND/OwnershipAndControl/OwnershipAndControl.rdf",
+        "sha256": "e6e2018aa7f8cb7c2fab2505906a5311b9e6a797e599133ddfb4fac1365a432f"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Parties/MetadataFNDParties.rdf",
+        "format": "xml",
+        "path": "FND/Parties/MetadataFNDParties.rdf",
+        "sha256": "bd0ba3e7a031c0c5b90f30f54eb8c6c4070036b2695792552ef2ad1764572704"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Parties/Parties.rdf",
+        "format": "xml",
+        "path": "FND/Parties/Parties.rdf",
+        "sha256": "2c7ef9cc4107e85b5bba3894094e496bcf4e8fe3ef9d6ce3b7d0830fb284f61d"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/Addresses.rdf",
+        "format": "xml",
+        "path": "FND/Places/Addresses.rdf",
+        "sha256": "e5a4db8fbf9370292825e1ee83afc60b2a554dbf2e9b723a527d4f3a6903178d"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/Facilities.rdf",
+        "format": "xml",
+        "path": "FND/Places/Facilities.rdf",
+        "sha256": "1e7f45e6e0c3362eab2edc0e2989e42e7930b2d62abb45ddcf484a9cc8a64965"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/MetadataFNDPlaces.rdf",
+        "format": "xml",
+        "path": "FND/Places/MetadataFNDPlaces.rdf",
+        "sha256": "375a578ba7308cac724ba4f230bb6bb8072dafab8cbb402fc5e938eadae51257"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/NorthAmerica/USPostalServiceAddresses.rdf",
+        "format": "xml",
+        "path": "FND/Places/NorthAmerica/USPostalServiceAddresses.rdf",
+        "sha256": "e1b8af13cfbd56c65e428ff820890c7d7d5b5057af269667e5305e15ef80b1c6"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals.rdf",
+        "format": "xml",
+        "path": "FND/Places/NorthAmerica/USPostalServiceAddressesIndividuals.rdf",
+        "sha256": "cb678250922b17163b318139f231ef0bebc99a07d6dbb7d9ed86e8a4777ca3f8"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/RealProperty.rdf",
+        "format": "xml",
+        "path": "FND/Places/RealProperty.rdf",
+        "sha256": "f0e5ecd06c164d1e5fff0c1236869b2014bcba3d7008365dcc2c7363064202bd"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Places/VirtualPlaces.rdf",
+        "format": "xml",
+        "path": "FND/Places/VirtualPlaces.rdf",
+        "sha256": "408986d983df3f87901b90ff49e3ba3f323f94111338f7674037f481104e6007"
+      },
+      {
+        "bundle_path": "references/fibo/FND/ProductsAndServices/MetadataFNDProductsAndServices.rdf",
+        "format": "xml",
+        "path": "FND/ProductsAndServices/MetadataFNDProductsAndServices.rdf",
+        "sha256": "9ebe2dcc0261e8d85a008f072f9a0cb9a30d5cb98bdbd2dbe9024772f89918f4"
+      },
+      {
+        "bundle_path": "references/fibo/FND/ProductsAndServices/PaymentsAndSchedules.rdf",
+        "format": "xml",
+        "path": "FND/ProductsAndServices/PaymentsAndSchedules.rdf",
+        "sha256": "53130861eac6d2084e3ddb6496db6123d851e37aa0259feed44cd96fd48920cf"
+      },
+      {
+        "bundle_path": "references/fibo/FND/ProductsAndServices/ProductsAndServices.rdf",
+        "format": "xml",
+        "path": "FND/ProductsAndServices/ProductsAndServices.rdf",
+        "sha256": "7f330c2b6de4e90f2c5d728ddf32af1d75f320646040450c1da9a8c5f8740548"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Relations/MetadataFNDRelations.rdf",
+        "format": "xml",
+        "path": "FND/Relations/MetadataFNDRelations.rdf",
+        "sha256": "eee8bec2b4829f9d2f04855e9264714d68753c6c5b1a57e1d1d41f47a5d25e89"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Relations/Relations.rdf",
+        "format": "xml",
+        "path": "FND/Relations/Relations.rdf",
+        "sha256": "5bd2fc8cf9713fc293309a78a9ec760e0eacc6a4c5e9499bbbb29b4f8a172fa2"
+      },
+      {
+        "bundle_path": "references/fibo/FND/TransactionsExt/MarketTransactions.rdf",
+        "format": "xml",
+        "path": "FND/TransactionsExt/MarketTransactions.rdf",
+        "sha256": "c6db657dd322bad9135c79dfe7fe0e80f7e2c5aaff92ca4b48c056a156ccc943"
+      },
+      {
+        "bundle_path": "references/fibo/FND/TransactionsExt/MetadataFNDTransactionsExt.rdf",
+        "format": "xml",
+        "path": "FND/TransactionsExt/MetadataFNDTransactionsExt.rdf",
+        "sha256": "d0ccb5540d6a97b80e2405daf83467dcda49dde9d6e83eccbb89ae5b6c9c922d"
+      },
+      {
+        "bundle_path": "references/fibo/FND/TransactionsExt/REATransactions.rdf",
+        "format": "xml",
+        "path": "FND/TransactionsExt/REATransactions.rdf",
+        "sha256": "a4a03421b94997c356ef5975cbdab23f45cffa4cec464b870e344d6c77d8678a"
+      },
+      {
+        "bundle_path": "references/fibo/FND/TransactionsExt/SecuritiesTransactions.rdf",
+        "format": "xml",
+        "path": "FND/TransactionsExt/SecuritiesTransactions.rdf",
+        "sha256": "b8d1f073c7f5a249c4aca92393d0d5fbb1100d1d19fc7977632a0f8643da347d"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Utilities/Analytics.rdf",
+        "format": "xml",
+        "path": "FND/Utilities/Analytics.rdf",
+        "sha256": "9af4d662d742fca95008743be6787bb2bd1fbfc7f881b5273e0e74b1b60ba5fb"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Utilities/AnnotationVocabulary.rdf",
+        "format": "xml",
+        "path": "FND/Utilities/AnnotationVocabulary.rdf",
+        "sha256": "b35d351e6d0d981175c56d3b40476b13e64e7b6ed90dd4fd030ececd6f23a2dd"
+      },
+      {
+        "bundle_path": "references/fibo/FND/Utilities/MetadataFNDUtilities.rdf",
+        "format": "xml",
+        "path": "FND/Utilities/MetadataFNDUtilities.rdf",
+        "sha256": "025f83985efb7fdccd0b71a83e551a994f88e59fcd91201d53681ba681da755a"
+      },
+      {
+        "bundle_path": "references/fibo/IND/AllIND-NorthAmerica.rdf",
+        "format": "xml",
+        "path": "IND/AllIND-NorthAmerica.rdf",
+        "sha256": "8d57b1330e6f595742a7ea0bc04b39a5ae3bcbdc6cbf2261e7c119e6c6eae35e"
+      },
+      {
+        "bundle_path": "references/fibo/IND/AllIND-ReferenceRates.rdf",
+        "format": "xml",
+        "path": "IND/AllIND-ReferenceRates.rdf",
+        "sha256": "1534bfcdb19578ef28d931882e2139e7140f3cf10953dc2562026d1b6bff659d"
+      },
+      {
+        "bundle_path": "references/fibo/IND/AllIND.rdf",
+        "format": "xml",
+        "path": "IND/AllIND.rdf",
+        "sha256": "3cdd04001173c2fe857a18bc5b2ee6d016a929c667bf468e814b161dae3a7220"
+      },
+      {
+        "bundle_path": "references/fibo/IND/EconomicIndicators/EconomicIndicators.rdf",
+        "format": "xml",
+        "path": "IND/EconomicIndicators/EconomicIndicators.rdf",
+        "sha256": "8403bfa40177c207d84c314ab9dc8e157b1928c8ac8b2d5ba84d9260106576c5"
+      },
+      {
+        "bundle_path": "references/fibo/IND/EconomicIndicators/MetadataINDEconomicIndicators.rdf",
+        "format": "xml",
+        "path": "IND/EconomicIndicators/MetadataINDEconomicIndicators.rdf",
+        "sha256": "981da7a46c2670d461891cca1743be80b6020171edbf4901b74fa8e5682af80f"
+      },
+      {
+        "bundle_path": "references/fibo/IND/EconomicIndicators/NorthAmericanIndicators/CAEconomicIndicators.rdf",
+        "format": "xml",
+        "path": "IND/EconomicIndicators/NorthAmericanIndicators/CAEconomicIndicators.rdf",
+        "sha256": "a06a0301d8cf8f8081904fa368ef17074ae7806ea3c96fa34eb61634f9bc05d6"
+      },
+      {
+        "bundle_path": "references/fibo/IND/EconomicIndicators/NorthAmericanIndicators/USEconomicIndicators.rdf",
+        "format": "xml",
+        "path": "IND/EconomicIndicators/NorthAmericanIndicators/USEconomicIndicators.rdf",
+        "sha256": "6226f575629a4ee3c82b410564a799468e4879a8b2bae96e935c7a0a0ed2c6ac"
+      },
+      {
+        "bundle_path": "references/fibo/IND/ForeignExchange/ForeignExchange.rdf",
+        "format": "xml",
+        "path": "IND/ForeignExchange/ForeignExchange.rdf",
+        "sha256": "b8e28a4f9e7d1652f38f3d40d54cafac7c6289d49873ee83714b241e5c72d239"
+      },
+      {
+        "bundle_path": "references/fibo/IND/ForeignExchange/MetadataINDForeignExchange.rdf",
+        "format": "xml",
+        "path": "IND/ForeignExchange/MetadataINDForeignExchange.rdf",
+        "sha256": "b2610974e7d889e18601b65487d958e4e17dfacf6802efa939d906352c80dcd3"
+      },
+      {
+        "bundle_path": "references/fibo/IND/Indicators/Indicators.rdf",
+        "format": "xml",
+        "path": "IND/Indicators/Indicators.rdf",
+        "sha256": "9ab287d18913717a2862bde09cfa2f404bd475a23e07755db731f30ee51be0a6"
+      },
+      {
+        "bundle_path": "references/fibo/IND/Indicators/MetadataINDIndicators.rdf",
+        "format": "xml",
+        "path": "IND/Indicators/MetadataINDIndicators.rdf",
+        "sha256": "a5b57bdca19d6462b8247c769fdf5746907c10efa811173b98bc686a72e7110b"
+      },
+      {
+        "bundle_path": "references/fibo/IND/InterestRates/CommonInterestRates.rdf",
+        "format": "xml",
+        "path": "IND/InterestRates/CommonInterestRates.rdf",
+        "sha256": "8e1390b32c1121edb492a0eee451b982bac6fbbed762aec6a29cd52950b5b0b2"
+      },
+      {
+        "bundle_path": "references/fibo/IND/InterestRates/InterestRates.rdf",
+        "format": "xml",
+        "path": "IND/InterestRates/InterestRates.rdf",
+        "sha256": "e2bedd18096c7346ecdd7687f4fbb370e828c7fc4e483bd84780e67e65d77fe1"
+      },
+      {
+        "bundle_path": "references/fibo/IND/InterestRates/MarketDataProviders.rdf",
+        "format": "xml",
+        "path": "IND/InterestRates/MarketDataProviders.rdf",
+        "sha256": "0b5fde6ab3fe477e8381e86968420d93073a53e8b18733937a275f845b4e18c4"
+      },
+      {
+        "bundle_path": "references/fibo/IND/InterestRates/MetadataINDInterestRates.rdf",
+        "format": "xml",
+        "path": "IND/InterestRates/MetadataINDInterestRates.rdf",
+        "sha256": "e1ef771a91e08aec58395f4cf9e8582708a0da1bddf79c8b938bcd902c6433cb"
+      },
+      {
+        "bundle_path": "references/fibo/IND/MarketIndices/BasketIndices.rdf",
+        "format": "xml",
+        "path": "IND/MarketIndices/BasketIndices.rdf",
+        "sha256": "8b9b76e637aa5b1332f4c7c5c8a862b34e591e273b3a9fd842a28ea66fc5c321"
+      },
+      {
+        "bundle_path": "references/fibo/IND/MarketIndices/MetadataINDMarketIndices.rdf",
+        "format": "xml",
+        "path": "IND/MarketIndices/MetadataINDMarketIndices.rdf",
+        "sha256": "630e300fe9ab1d32d5397eb8c956d5838233c36fe996a179892b99d4edeb987e"
+      },
+      {
+        "bundle_path": "references/fibo/IND/MetadataIND.rdf",
+        "format": "xml",
+        "path": "IND/MetadataIND.rdf",
+        "sha256": "13912f0e796f2756d2dfc5f57f32f83c6a009d2ebe2163d0e18c506ba61f7ce6"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/AllLOAN.rdf",
+        "format": "xml",
+        "path": "LOAN/AllLOAN.rdf",
+        "sha256": "7c574f7b52f41da03dc5ec835a218a2e760fed995538bc21b3fb027d49255b32"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansGeneral/LoanApplications.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansGeneral/LoanApplications.rdf",
+        "sha256": "8202fa75b97c33c23b62b818e5df80b122af94dadc7ccf42fe9266d72d61445e"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansGeneral/LoanEvents.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansGeneral/LoanEvents.rdf",
+        "sha256": "48fe43dc99b1d7ca56ee712ff80baad56b5ac6abd1e4cb8ac5342e7bdee88e6e"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansGeneral/Loans.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansGeneral/Loans.rdf",
+        "sha256": "3a6fded17e53b09613c8738a0ed77662a436d03a066ae0ddf7952214fb5d7280"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansGeneral/LoansRegulatory.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansGeneral/LoansRegulatory.rdf",
+        "sha256": "9d1d4cf0d45e2966f6fbe27dd62486cdd11c427c2d40f7701ea8f1775769245b"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansGeneral/MetadataLOANLoansGeneral.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansGeneral/MetadataLOANLoansGeneral.rdf",
+        "sha256": "73de8d17083b2f7cb641d9a7c4e7b5ae44508d8baae58b381fe57274a09951ec"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/CardAccounts.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/CardAccounts.rdf",
+        "sha256": "dece66f4c9b1f239652e87cc348f748a4ba083249a57e8f2f3c688bfe30e2f19"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/CommercialLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/CommercialLoans.rdf",
+        "sha256": "c2843be0fac87b4f6ea4a3f88fe40c64784f8800a75ccdb185bbd2265d9bd7c3"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/ConsumerLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/ConsumerLoans.rdf",
+        "sha256": "7c7642cd546c2c1de619d2ea9b384b314886dedf7c8601dab9a46870d0e591d7"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/GreenLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/GreenLoans.rdf",
+        "sha256": "cff1f078bed4eeb9970073ab5ccbace470a24c6150ac1e18310cbe1894b9e006"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/LoanProducts.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/LoanProducts.rdf",
+        "sha256": "1b62e30b1c3693cc85e718679f9b231242d1342cdfc54a4c99663db4f26a8644"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/MarineFinance.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/MarineFinance.rdf",
+        "sha256": "ab59d0379b2ad3a710669ccbb048f639d29436b20df95d91770694bf7f22c84e"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/MetadataLOANLoansSpecific.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/MetadataLOANLoansSpecific.rdf",
+        "sha256": "63daf5aea5ba5bff9ba38ce9e5b637789648f3f0ee452db7de545530b222ee62"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/LoansSpecific/StudentLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/LoansSpecific/StudentLoans.rdf",
+        "sha256": "2e024d79512aeb643d4e0bfd2473cf6fb5ed3cf7fa306e0abcd66d66fdcc0d68"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/MetadataLOAN.rdf",
+        "format": "xml",
+        "path": "LOAN/MetadataLOAN.rdf",
+        "sha256": "143bb48c64e377da7f105d9fc1b36d49e9d7b82dbc1fe0d3c012401f48e99d7a"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/RealEstateLoans/ConstructionLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/RealEstateLoans/ConstructionLoans.rdf",
+        "sha256": "c8807a0349286758472a44895c182ef590265f17f0b2af37b0bdae6d5c206f68"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/RealEstateLoans/HomeMortgageDisclosureActCoveredMortgages.rdf",
+        "format": "xml",
+        "path": "LOAN/RealEstateLoans/HomeMortgageDisclosureActCoveredMortgages.rdf",
+        "sha256": "c6feed0cf8f9c31063c105e293abb9e2add43152d3993dd5c4e7722d89df3473"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/RealEstateLoans/MetadataLOANRealEstateLoans.rdf",
+        "format": "xml",
+        "path": "LOAN/RealEstateLoans/MetadataLOANRealEstateLoans.rdf",
+        "sha256": "9eac3178fdcee2f01aa9b0aa46dfd02a34bb918f3c9930d9e97029ecbd6656cb"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/RealEstateLoans/MortgageOrigination.rdf",
+        "format": "xml",
+        "path": "LOAN/RealEstateLoans/MortgageOrigination.rdf",
+        "sha256": "939ceaa7d7758108e99a4653c0d982fdf5cb9bce32f07927542f3b01508e593a"
+      },
+      {
+        "bundle_path": "references/fibo/LOAN/RealEstateLoans/Mortgages.rdf",
+        "format": "xml",
+        "path": "LOAN/RealEstateLoans/Mortgages.rdf",
+        "sha256": "69fec2eeb0f7fc099e11c13a9ed3e6b5a1902c2f2a2af30a81282d1f4a6bdfa5"
+      },
+      {
+        "bundle_path": "references/fibo/MD/CIVTemporal/FundsTemporal.rdf",
+        "format": "xml",
+        "path": "MD/CIVTemporal/FundsTemporal.rdf",
+        "sha256": "6355d85024e646fcee8b117a329d3c2307126ca0c3e3721b62ec12813bf12817"
+      },
+      {
+        "bundle_path": "references/fibo/MD/CIVTemporal/MetadataMDCIVTemporal.rdf",
+        "format": "xml",
+        "path": "MD/CIVTemporal/MetadataMDCIVTemporal.rdf",
+        "sha256": "902262220b49e3267f0d8ef540b59a7be5ee0753bcccee8ef5a0ee1027722678"
+      },
+      {
+        "bundle_path": "references/fibo/MD/DebtTemporal/DebtAnalytics.rdf",
+        "format": "xml",
+        "path": "MD/DebtTemporal/DebtAnalytics.rdf",
+        "sha256": "4a5facbdedf24373f412662d54858a7e9bb5e857cf4bc60543d124abfb92804a"
+      },
+      {
+        "bundle_path": "references/fibo/MD/DebtTemporal/MetadataMDDebtTemporal.rdf",
+        "format": "xml",
+        "path": "MD/DebtTemporal/MetadataMDDebtTemporal.rdf",
+        "sha256": "5e26605f0f5c453553088e165e0fec373345569e6cb92856596d9957965f2680"
+      },
+      {
+        "bundle_path": "references/fibo/MD/DerivativesTemporal/ETOptionsTemporal.rdf",
+        "format": "xml",
+        "path": "MD/DerivativesTemporal/ETOptionsTemporal.rdf",
+        "sha256": "c9fb3c7ad151168ecfeee8fa19d4cecdedf784d117c95c63d88ddd4c69e32f13"
+      },
+      {
+        "bundle_path": "references/fibo/MD/DerivativesTemporal/FuturesTemporal.rdf",
+        "format": "xml",
+        "path": "MD/DerivativesTemporal/FuturesTemporal.rdf",
+        "sha256": "c2e233cb71a6057762c1da19bf2b1316166cd651fcf570e55af51b91c70f41c5"
+      },
+      {
+        "bundle_path": "references/fibo/MD/DerivativesTemporal/MetadataMDDerivativesTemporal.rdf",
+        "format": "xml",
+        "path": "MD/DerivativesTemporal/MetadataMDDerivativesTemporal.rdf",
+        "sha256": "ebc319c5c3b80086c6cdcaa5a96fe89ba4c8d096689604c47d28f9c2a3cea003"
+      },
+      {
+        "bundle_path": "references/fibo/MD/MetadataMD.rdf",
+        "format": "xml",
+        "path": "MD/MetadataMD.rdf",
+        "sha256": "b115b15c4e5309ec4e4e03f58c500a747f103c4df964cbec40a63ecb0d621ff0"
+      },
+      {
+        "bundle_path": "references/fibo/MD/TemporalCore/MetadataMDTemporalCore.rdf",
+        "format": "xml",
+        "path": "MD/TemporalCore/MetadataMDTemporalCore.rdf",
+        "sha256": "4ed460d18303eb307c597e62ea2ce7a53e69980a1df388c405bc2d575702de63"
+      },
+      {
+        "bundle_path": "references/fibo/MD/TemporalCore/SecurityCreditStatuses.rdf",
+        "format": "xml",
+        "path": "MD/TemporalCore/SecurityCreditStatuses.rdf",
+        "sha256": "e03c8b200b6a5c2725a08112c4d0ae2e6d50d0fb9df0b05784ec7b794efce940"
+      },
+      {
+        "bundle_path": "references/fibo/MD/TemporalCore/SecurityTradingStatuses.rdf",
+        "format": "xml",
+        "path": "MD/TemporalCore/SecurityTradingStatuses.rdf",
+        "sha256": "8a03a65aded2ec980c264825a2bc807c16de2c9eaf269f974fefbf8780f0ad23"
+      },
+      {
+        "bundle_path": "references/fibo/MetadataFIBO.rdf",
+        "format": "xml",
+        "path": "MetadataFIBO.rdf",
+        "sha256": "9fdec7e5ea3ab86b8857656284f68ac5c734f4bf22b651cec29dc38547ccba1b"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/AllSEC-Europe.rdf",
+        "format": "xml",
+        "path": "SEC/AllSEC-Europe.rdf",
+        "sha256": "54158fafe9da7396eefff1b0095aa268ac8f5a0cec96a2b97acfa2791179338d"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/AllSEC-NorthAmerica.rdf",
+        "format": "xml",
+        "path": "SEC/AllSEC-NorthAmerica.rdf",
+        "sha256": "862f431407f66e18f8ce28303798d7004792304549274db953434c55b7428ffb"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/AllSEC-ReferenceIndividuals.rdf",
+        "format": "xml",
+        "path": "SEC/AllSEC-ReferenceIndividuals.rdf",
+        "sha256": "43177388e686e98d7afbbdaa905c049a5657b5d5f233d4775995c3cb8864f718"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/AllSEC.rdf",
+        "format": "xml",
+        "path": "SEC/AllSEC.rdf",
+        "sha256": "7c81a9ba20f8086f8773268815710c21f13c0110718baa05bb66da9ae6d3e5ab"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/AssetBackedSecurities.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/AssetBackedSecurities.rdf",
+        "sha256": "bc31503fb47984eace3c48c15e458215440e108098254f13885985b958f90b44"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/Bonds.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/Bonds.rdf",
+        "sha256": "e8d406159e34a92dc8e87cfce162f6fc67e075db2b2f73c520d41f7419bb0844"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/CollateralizedDebtObligations.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/CollateralizedDebtObligations.rdf",
+        "sha256": "a5aa66c8b98fee8abed9ce7c551e395e57aaf20d005a706aa7c4a7d7a66136bc"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/DebtInstruments.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/DebtInstruments.rdf",
+        "sha256": "c925727a93c23f915b4b066177d4aaad43b8ca620e9ced28bc7a9b1cb316a54c"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/DistributedLoans.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/DistributedLoans.rdf",
+        "sha256": "e5c52f2c6a506f223eaf08eee9562afee227c14cccfe925edbce3b2eeaa074b0"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/ExerciseConventions.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/ExerciseConventions.rdf",
+        "sha256": "b0549059cf085c65a45ceb8097c6a5d1580392da9215ca35ca9afe213b18f5e4"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/MetadataSECDebt.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/MetadataSECDebt.rdf",
+        "sha256": "a228ff40bca21a0a7ad32442b702a56f195e852776fd20df10e59ae23d3777fa"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/MortgageBackedSecurities.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/MortgageBackedSecurities.rdf",
+        "sha256": "025d7e89558a319cbd2b60f6a11ca228190a5137c59ed5b5bf34878c5f976f60"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/PoolBackedSecurities.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/PoolBackedSecurities.rdf",
+        "sha256": "4922b5d6fd80f046fedb705a51e5978f5d67d714330601c4fa251be149c7b5c7"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/SyntheticCDOs.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/SyntheticCDOs.rdf",
+        "sha256": "141b3c40ed364214aed3965d9cbe9daaa58da12da50f05938bd6d436aad71e2b"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Debt/TradedShortTermDebt.rdf",
+        "format": "xml",
+        "path": "SEC/Debt/TradedShortTermDebt.rdf",
+        "sha256": "5edf240c05ec5ae1a2890d6bacd728412073d70868c0908cad8aaea54d9d21bf"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Equities/DepositaryReceipts.rdf",
+        "format": "xml",
+        "path": "SEC/Equities/DepositaryReceipts.rdf",
+        "sha256": "dcb6707b33fd1bafd81ed0f5e71016e204f1eca273f82833bfa9d07319be3b34"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Equities/EquityCFIClassificationIndividuals.rdf",
+        "format": "xml",
+        "path": "SEC/Equities/EquityCFIClassificationIndividuals.rdf",
+        "sha256": "e698ab6eabe9528750ce3dbc76f03090e26eac1f69c2fa7f62cb5d52ba93d10e"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Equities/EquityInstruments.rdf",
+        "format": "xml",
+        "path": "SEC/Equities/EquityInstruments.rdf",
+        "sha256": "1c0f41de59ed514a1c80cfea5fbe96be6493eea8266f851de2d3bbd414fdcd32"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Equities/MetadataSECEquities.rdf",
+        "format": "xml",
+        "path": "SEC/Equities/MetadataSECEquities.rdf",
+        "sha256": "5dcb3450ee5ad342ef8f7a187312182b44eb6a1420915bbaf73fa897c3b32195"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Funds/CollectiveInvestmentVehicles.rdf",
+        "format": "xml",
+        "path": "SEC/Funds/CollectiveInvestmentVehicles.rdf",
+        "sha256": "ee709790f7157eacba64b78b55ac3e69da45c99673be17ca2df35d4f0ed3230c"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Funds/Funds.rdf",
+        "format": "xml",
+        "path": "SEC/Funds/Funds.rdf",
+        "sha256": "a82c11f42ef79a0f83aeae8434ad054ddef746da9d97126ef3d8923eacf9c275"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Funds/MetadataSECFunds.rdf",
+        "format": "xml",
+        "path": "SEC/Funds/MetadataSECFunds.rdf",
+        "sha256": "1014b2f611be3f5c3ed2c5efba63f3b5a4184f3672a3134b8d15c1ebdd3507b8"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/MetadataSEC.rdf",
+        "format": "xml",
+        "path": "SEC/MetadataSEC.rdf",
+        "sha256": "2bfb44e9c8dcf9abe02355dfd1cf63d2876279b9522ec565977871f9b8a0de6b"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/Baskets.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/Baskets.rdf",
+        "sha256": "f1997b0934adf3676bd3123e6e96393a1aca9f7d83555f75bfd2dd84b1723bcf"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/EuropeanSecurities/EUSecuritiesRestrictions.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/EuropeanSecurities/EUSecuritiesRestrictions.rdf",
+        "sha256": "d2c4e0b02d30114692ca293e6f51e26b36eef9f530171ac73c4831c6e7869087"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/MetadataSECSecurities.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/MetadataSECSecurities.rdf",
+        "sha256": "22c6309beab02427c12a2ad331999cdcca33c31728bcb421bedae425fb87b44a"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/NorthAmericanSecurities/USSecuritiesRestrictions.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/NorthAmericanSecurities/USSecuritiesRestrictions.rdf",
+        "sha256": "91c51c4810cfe6c5acc0aaf99de529357298d47f01cfe4f5eee4962f40f5be33"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/ParametricSchedules.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/ParametricSchedules.rdf",
+        "sha256": "65cb5c281b45137091b6ba56c7877ca9362f110f63fe1d5aec4298e6583068ba"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/Pools.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/Pools.rdf",
+        "sha256": "73259da08ce2d3336ab19acd98a9182e1bef062fb636a27936e96545e083ec39"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesClassification.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesClassification.rdf",
+        "sha256": "6fed3fa3ddd850e875bf020fa5eb79e1d90023fb74888e9c1856e32882bc8f76"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesIdentification.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesIdentification.rdf",
+        "sha256": "966091c50a68aae0becec1ae82b25a9fa7129356c4caa9b25ba1ed33b8fdd2cf"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesIdentificationIndividuals.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesIdentificationIndividuals.rdf",
+        "sha256": "be76358ba2a858eedd6bae77ca133882b7a1e2862cc351839d6b047eb2b024fa"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesIssuance.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesIssuance.rdf",
+        "sha256": "7b3088e8315beedb43222e345522bb546f87fbbd6850833103c9ba84ea1d7ac0"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesListings.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesListings.rdf",
+        "sha256": "b48b0dffba0ff38934d4794fc2b405f7381e06bb5593315f94807ca42a5731ae"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecuritiesRestrictions.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecuritiesRestrictions.rdf",
+        "sha256": "241669b0c114de2a69849d3c5ae0b04d6c14efbda13080a5a41e98a49ceef1f2"
+      },
+      {
+        "bundle_path": "references/fibo/SEC/Securities/SecurityAssets.rdf",
+        "format": "xml",
+        "path": "SEC/Securities/SecurityAssets.rdf",
+        "sha256": "dde08aaee451445b4e06fca99fce35465b78a6ac79dd7956fbe8838358b5b18c"
+      }
+    ]
+  },
+  "statistics": {
+    "entities_by_kind": {
+      "annotation_property": 7,
+      "class": 2998,
+      "datatype_property": 263,
+      "individual": 11964,
+      "object_property": 941,
+      "ontology": 296
+    },
+    "entities_projected": 16469,
+    "triples": 133646,
+    "unsupported_constructs": {
+      "datatype_restriction": 2,
+      "intersection_of": 26,
+      "property_chain_axiom": 7,
+      "union_of": 293
+    }
+  }
+}

@@ -1,0 +1,1 @@
+"""FIBO projection profile."""
