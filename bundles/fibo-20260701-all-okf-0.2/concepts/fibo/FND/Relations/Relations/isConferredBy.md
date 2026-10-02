@@ -1,0 +1,50 @@
+---
+owl:
+  annotations:
+  - predicate: http://www.w3.org/2000/01/rdf-schema#label
+    value: is conferred by
+  - predicate: http://www.w3.org/2004/02/skos/core#definition
+    value: a relationship between a right or obligation and the vehicle, such as an agreement or contract, that vests (or
+      confers) said right or obligation
+  - predicate: https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+    value: This property should be read as describing some legal power or duty, some commitment or some social construct being
+      conferred as a result of some social construct such as an agreement or some legal authority. These concepts, which would
+      describe the kind of thing of which this is a property, and the kinds of thing in terms of which this property is framed,
+      are outside the scope of this model and so are not shown.
+  inverse_of:
+  - concept: /concepts/fibo/FND/Relations/Relations/confers.md
+    predicate: http://www.w3.org/2002/07/owl#inverseOf
+    resource: https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/confers
+  rdf_types:
+  - http://www.w3.org/2002/07/owl#ObjectProperty
+resource: https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isConferredBy
+sources:
+- id: fibo-source-5bd2fc8cf9
+  resource: references/fibo/FND/Relations/Relations.rdf
+  sha256: 5bd2fc8cf9713fc293309a78a9ec760e0eacc6a4c5e9499bbbb29b4f8a172fa2
+  title: FIBO source FND/Relations/Relations.rdf
+title: is conferred by
+type: Ontology Property
+---
+
+# is conferred by
+
+Canonical resource: <https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/isConferredBy>
+
+## Definition
+
+a relationship between a right or obligation and the vehicle, such as an agreement or contract, that vests (or confers) said right or obligation
+
+## Relationships
+
+- **Inverse of**: [confers](/concepts/fibo/FND/Relations/Relations/confers.md)
+
+## Annotations
+
+- **label**: is conferred by
+- **definition**: a relationship between a right or obligation and the vehicle, such as an agreement or contract, that vests (or confers) said right or obligation
+- **explanatoryNote**: This property should be read as describing some legal power or duty, some commitment or some social construct being conferred as a result of some social construct such as an agreement or some legal authority. These concepts, which would describe the kind of thing of which this is a property, and the kinds of thing in terms of which this property is framed, are outside the scope of this model and so are not shown.
+
+## Source fidelity
+
+The complete RDF/OWL statements for this resource are retained in the source document referenced by the `sources` frontmatter. The `owl` frontmatter extension carries the profile's structured projection of relationships, restrictions, characteristics, and annotations.

@@ -1,0 +1,17 @@
+# Concepts
+
+* [collateral valuation](CollateralValuation.md)
+* [court judgment](CourtJudgment.md)
+* [has default amount](hasDefaultAmount.md)
+* [disbursement date](hasDisbursementDate.md)
+* [has judgement amount](hasJudgementAmount.md)
+* [in default](inDefault.md)
+* [is against](isAgainst.md)
+* [is deferred](isDeferred.md)
+* [is delivered by](isDeliveredBy.md)
+* [legal proceeding](LegalProceeding.md)
+* [loan default proceeding](LoanDefaultProceeding.md)
+* [loan paid in full](LoanPaidInFull.md)
+* [loan phase](LoanPhase.md)
+* [prepayment](Prepayment.md)
+* [repayment phase](RepaymentPhase.md)

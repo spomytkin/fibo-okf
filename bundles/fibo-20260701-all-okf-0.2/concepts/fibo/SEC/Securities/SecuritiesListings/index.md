@@ -1,0 +1,16 @@
+# Concepts
+
+* [has delisting date](hasDelistingDate.md)
+* [has home exchange](hasHomeExchange.md)
+* [has last trading date and time](hasLastTradingDateTime.md)
+* [has listing date](hasListingDate.md)
+* [has original place of listing](hasOriginalPlaceOfListing.md)
+* [has tick size](hasTickSize.md)
+* [is listed via](isListedVia.md)
+* [is seasoned](isSeasoned.md)
+* [is traded on](isTradedOn.md)
+* [listed security](ListedSecurity.md)
+* [listing](Listing.md)
+* [listing service](ListingService.md)
+* [lists](lists.md)
+* [registered security](RegisteredSecurity.md)

@@ -2,4 +2,12 @@
 Thumbs.db
 LoanExtras.rdf
 .idea/
+.venv/
+.codex-deps/
+.tmp/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+**/build/
 .DS_Store

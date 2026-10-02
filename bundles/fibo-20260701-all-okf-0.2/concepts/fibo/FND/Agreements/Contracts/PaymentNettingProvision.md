@@ -1,0 +1,56 @@
+---
+owl:
+  annotations:
+  - language: en
+    predicate: http://www.w3.org/2000/01/rdf-schema#label
+    value: payment netting provision
+  - language: en
+    predicate: http://www.w3.org/2004/02/skos/core#definition
+    value: netting provision that specifies the way in which all payments in a single currency owed between parties will be
+      aggregated for each traded currency per value date and within the larger aggregate obligation
+  - predicate: https://www.omg.org/spec/Commons/AnnotationVocabulary/explanatoryNote
+    value: For each value date and for each traded currency, the parties will aggregate and net all payments owed between
+      them to arrive at a single currency obligation for each currency payable between the parties. The parties calculate
+      net payments at some pre-agreed time, typically the day before value date (although it is possible to agree net payments
+      on the value date, depending on the currency and time zone).
+  rdf_types:
+  - http://www.w3.org/2002/07/owl#Class
+  see_also:
+  - predicate: http://www.w3.org/2000/01/rdf-schema#seeAlso
+    resource: https://www.newyorkfed.org/medialibrary/microsites/fmlg/files/Millerspresentationonnetting.pdf
+  subclass_of:
+  - concept: /concepts/fibo/FND/Agreements/Contracts/NettingProvision.md
+    predicate: http://www.w3.org/2000/01/rdf-schema#subClassOf
+    resource: https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/NettingProvision
+resource: https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/PaymentNettingProvision
+sources:
+- id: fibo-source-310cd83e5e
+  resource: references/fibo/FND/Agreements/Contracts.rdf
+  sha256: 310cd83e5e80f369e3f18c0a064ecf0f9519dae374fd89af25778d1089321ed8
+  title: FIBO source FND/Agreements/Contracts.rdf
+title: payment netting provision
+type: Ontology Class
+---
+
+# payment netting provision
+
+Canonical resource: <https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/PaymentNettingProvision>
+
+## Definition
+
+netting provision that specifies the way in which all payments in a single currency owed between parties will be aggregated for each traded currency per value date and within the larger aggregate obligation
+
+## Relationships
+
+- **See also**: [Millerspresentationonnetting.pdf](<https://www.newyorkfed.org/medialibrary/microsites/fmlg/files/Millerspresentationonnetting.pdf>)
+- **Subclass of**: [NettingProvision](/concepts/fibo/FND/Agreements/Contracts/NettingProvision.md)
+
+## Annotations
+
+- **label** (en): payment netting provision
+- **definition** (en): netting provision that specifies the way in which all payments in a single currency owed between parties will be aggregated for each traded currency per value date and within the larger aggregate obligation
+- **explanatoryNote**: For each value date and for each traded currency, the parties will aggregate and net all payments owed between them to arrive at a single currency obligation for each currency payable between the parties. The parties calculate net payments at some pre-agreed time, typically the day before value date (although it is possible to agree net payments on the value date, depending on the currency and time zone).
+
+## Source fidelity
+
+The complete RDF/OWL statements for this resource are retained in the source document referenced by the `sources` frontmatter. The `owl` frontmatter extension carries the profile's structured projection of relationships, restrictions, characteristics, and annotations.
