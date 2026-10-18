@@ -148,7 +148,7 @@ def write_bundle(
             document.frontmatter,
             allow_unicode=True,
             default_flow_style=False,
-            sort_keys=True,
+            sort_keys=False,
             width=120,
         ).rstrip()
         _write_text(bundle / document.path, f"---\n{rendered_yaml}\n---\n\n{document.body}")

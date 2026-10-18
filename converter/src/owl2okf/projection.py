@@ -7,6 +7,7 @@ from dataclasses import dataclass
 from pathlib import PurePosixPath
 from urllib.parse import urlsplit
 
+from . import __version__
 from .profiles.base import OntologyProfile
 from .semantic import OntologyEntity, OntologyModel
 
@@ -71,33 +72,61 @@ def _relationship_frontmatter(entity: OntologyEntity, profile: OntologyProfile, 
         owl["deprecated"] = True
     if entity.rdf_types:
         owl["rdf_types"] = entity.rdf_types
-    if entity.annotations:
-        owl["annotations"] = [
-            {
-                "predicate": annotation.predicate,
-                "value": annotation.value,
-                **({"language": annotation.language} if annotation.language else {}),
-                **({"datatype": annotation.datatype} if annotation.datatype else {}),
-            }
-            for annotation in entity.annotations
-        ]
     return owl
 
 
-def _source_frontmatter(entity: OntologyEntity, model: OntologyModel) -> list[dict[str, str]]:
+def _source_frontmatter(
+    entity: OntologyEntity,
+    model: OntologyModel,
+    source_credibility: dict[str, dict[str, str]],
+) -> list[dict[str, str]]:
     sources = {source.path: source for source in model.source_files}
     result = []
     for path in entity.source_paths:
         source = sources.get(path)
         if source is None:
             continue
-        result.append({
+        entry = {
             "id": f"fibo-source-{source.sha256[:10]}",
             "resource": f"references/fibo/{source.path}",
             "title": f"FIBO source {source.path}",
             "sha256": source.sha256,
-        })
+        }
+        entry.update(source_credibility.get(path, {}))
+        result.append(entry)
     return sorted(result, key=lambda item: item["resource"])
+
+
+def _tags_for(entity: OntologyEntity, profile: OntologyProfile) -> list[str]:
+    """Use the ontology module path as stable, cross-document tags."""
+    namespace = getattr(profile, "namespace", "")
+    namespace_path = urlsplit(namespace).path.rstrip("/") + "/"
+    parsed = urlsplit(entity.iri)
+    if not namespace_path or not parsed.path.startswith(namespace_path):
+        return []
+    parts = parsed.path[len(namespace_path):].strip("/").split("/")
+    if parts and len(parts[0]) == 8 and parts[0].isdigit():
+        parts = parts[1:]
+    return parts[:-1]
+
+
+def _direct_subclasses(
+    entity: OntologyEntity,
+    entities: dict[str, OntologyEntity],
+    profile: OntologyProfile,
+    paths: dict[str, str],
+) -> list[dict[str, str]]:
+    children = []
+    for candidate in entities.values():
+        for relation in candidate.relations:
+            if relation.target == entity.iri and profile.relationship_kind(relation.predicate) == "subclass_of":
+                children.append({
+                    "resource": candidate.iri,
+                    "predicate": relation.predicate,
+                    "concept": f"/{paths[candidate.iri]}",
+                    "title": profile.title_for(candidate),
+                })
+    return sorted(children, key=lambda item: (item["title"].casefold(), item["resource"]))
 
 
 def _markdown_link(target: str, label: str, paths: dict[str, str]) -> str:
@@ -111,14 +140,17 @@ def _title_for_target(target: str) -> str:
     return parsed.fragment or parsed.path.rstrip("/").rsplit("/", 1)[-1] or target
 
 
-def _render_body(entity: OntologyEntity, profile: OntologyProfile, paths: dict[str, str]) -> str:
+def _render_body(
+    entity: OntologyEntity,
+    profile: OntologyProfile,
+    paths: dict[str, str],
+    direct_subclasses: list[dict[str, str]],
+) -> str:
     title = profile.title_for(entity)
-    lines = [f"# {title}", "", f"Canonical resource: <{entity.iri}>"]
+    lines = [f"# {title}"]
     definitions = profile.definition_for(entity)
-    if definitions:
-        lines.extend(["", "## Definition", "", definitions[0]])
-        if len(definitions) > 1:
-            lines.extend(["", "## Additional definitions", "", *[f"- {item}" for item in definitions[1:]]])
+    if len(definitions) > 1:
+        lines.extend(["", "## Additional definitions", "", *[f"- {item}" for item in definitions[1:]]])
     synonyms = profile.synonyms_for(entity)
     if synonyms:
         lines.extend(["", "## Synonyms", "", *[f"- {value}" for value in synonyms]])
@@ -129,6 +161,10 @@ def _render_body(entity: OntologyEntity, profile: OntologyProfile, paths: dict[s
         for relation in linked:
             kind = profile.relationship_kind(relation.predicate).replace("_", " ").capitalize()
             lines.append(f"- **{kind}**: {_markdown_link(relation.target, _title_for_target(relation.target), paths)}")
+    if direct_subclasses:
+        lines.extend(["", "## Direct subclasses", ""])
+        for child in direct_subclasses:
+            lines.append(f"- [{child['title']}]({child['concept']})")
     if constraints or entity.restrictions:
         lines.extend(["", "## Constraints", ""])
         for relation in constraints:
@@ -143,22 +179,16 @@ def _render_body(entity: OntologyEntity, profile: OntologyProfile, paths: dict[s
             if restriction.value:
                 value += f" value `{restriction.value}`"
             lines.append(f"- **{prop}**: {value}")
-    if entity.annotations:
-        lines.extend(["", "## Annotations", ""])
-        for annotation in entity.annotations:
-            label = _title_for_target(annotation.predicate)
-            language = f" ({annotation.language})" if annotation.language else ""
-            lines.append(f"- **{label}**{language}: {annotation.value.replace(chr(10), ' ').replace(chr(13), ' ')}")
-    lines.extend([
-        "",
-        "## Source fidelity",
-        "",
-        "The complete RDF/OWL statements for this resource are retained in the source document referenced by the `sources` frontmatter. The `owl` frontmatter extension carries the profile's structured projection of relationships, restrictions, characteristics, and annotations.",
-    ])
     return "\n".join(lines).rstrip() + "\n"
 
 
-def project(model: OntologyModel, profile: OntologyProfile, *, scope: str = "all") -> OKFProjection:
+def project(
+    model: OntologyModel,
+    profile: OntologyProfile,
+    *,
+    scope: str = "all",
+    source_credibility: dict[str, dict[str, str]] | None = None,
+) -> OKFProjection:
     selected = [entity for entity in model.entities.values() if profile.select(entity)]
     if scope.lower() not in {"all", "domains"}:
         domain = scope.upper()
@@ -166,21 +196,36 @@ def project(model: OntologyModel, profile: OntologyProfile, *, scope: str = "all
         if not selected:
             raise ValueError(f"No entities matched requested scope {domain!r}")
     paths = _assign_paths(selected, profile)
+    selected_by_iri = {entity.iri: entity for entity in selected}
     documents = {}
     for entity in sorted(selected, key=lambda item: item.iri):
+        definitions = profile.definition_for(entity)
+        direct_subclasses = _direct_subclasses(entity, selected_by_iri, profile, paths)
         frontmatter = {
-            "type": profile.type_for(entity),
             "title": profile.title_for(entity),
-            "resource": entity.iri,
-            "owl": _relationship_frontmatter(entity, profile, paths),
+            "type": profile.type_for(entity),
         }
+        if definitions:
+            frontmatter["description"] = definitions[0]
+        frontmatter["resource"] = entity.iri
+        tags = _tags_for(entity, profile)
+        if tags:
+            frontmatter["tags"] = tags
+        frontmatter["generated"] = {"by": f"owl2okf/{__version__}"}
         if entity.source_paths:
-            frontmatter["sources"] = _source_frontmatter(entity, model)
+            frontmatter["sources"] = _source_frontmatter(entity, model, source_credibility or {})
+        owl = _relationship_frontmatter(entity, profile, paths)
+        if direct_subclasses:
+            owl["direct_subclasses"] = [
+                {key: value for key, value in child.items() if key != "title"}
+                for child in direct_subclasses
+            ]
+        frontmatter["owl"] = owl
         document_path = paths[entity.iri]
         documents[document_path] = OKFDocument(
             path=document_path,
             frontmatter=frontmatter,
-            body=_render_body(entity, profile, paths),
+            body=_render_body(entity, profile, paths, direct_subclasses),
         )
     return OKFProjection(
         profile_name=profile.name,

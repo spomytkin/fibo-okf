@@ -36,6 +36,52 @@ def _source_revision(source: Path) -> str | None:
     return result.stdout.strip() or None
 
 
+def _source_credibility(
+    source: Path,
+    source_locations: dict[str, Path],
+    profile,
+) -> dict[str, dict[str, str]]:
+    """Collect stable source-file credibility signals from local Git history."""
+    directory = source if source.is_dir() else source.parent
+    try:
+        root = subprocess.run(
+            ["git", "-C", str(directory), "rev-parse", "--show-toplevel"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+    except (OSError, subprocess.CalledProcessError):
+        return {}
+
+    identities = getattr(profile, "config", {}).get("contributor_identities", {})
+    credibility: dict[str, dict[str, str]] = {}
+    for source_name, location in source_locations.items():
+        try:
+            relative = str(location.resolve().relative_to(Path(root).resolve())).replace("\\", "/")
+            result = subprocess.run(
+                ["git", "-C", root, "log", "--follow", "--format=%aI%x1f%ae", "--", relative],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except (OSError, ValueError, subprocess.CalledProcessError):
+            continue
+        history = [line.split("\x1f", 1) for line in result.stdout.splitlines() if "\x1f" in line]
+        if not history:
+            continue
+        record = {"last_modified": history[0][0]}
+        latest_identity = identities.get(history[0][1])
+        if latest_identity:
+            record["last_modified_by"] = latest_identity["actor"]
+            record["last_modified_by_profile"] = latest_identity["profile"]
+        authors = {email for _, email in history}
+        if len(authors) == 1 and (identity := identities.get(next(iter(authors)))):
+            record["author"] = identity["actor"]
+            record["author_profile"] = identity["profile"]
+        credibility[source_name] = record
+    return credibility
+
+
 def _fibo_release(version_iris: list[str], revision: str | None, override: str | None) -> str:
     if override:
         return override
@@ -113,12 +159,13 @@ def compile_ontology(
 
     output_path.mkdir(parents=True, exist_ok=False)
     profile_digest = _profile_digest(profile)
+    source_credibility = _source_credibility(source_path, loaded.locations, profile)
     results = []
     validation_errors = []
     quality_warnings = []
     try:
         for bundle_scope in scopes:
-            projection = project(model, profile, scope=bundle_scope)
+            projection = project(model, profile, scope=bundle_scope, source_credibility=source_credibility)
             bundle_name = f"{profile.name}-{release}-{bundle_scope.lower()}-okf-0.2"
             bundle_path = output_path / bundle_name
             write_bundle(
