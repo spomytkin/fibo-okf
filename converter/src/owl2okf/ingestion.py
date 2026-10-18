@@ -112,7 +112,8 @@ def _source_files(source: Path, output: Path) -> list[Path]:
     for path in source.rglob("*"):
         if not path.is_file() or path.suffix.lower() not in FORMAT_BY_SUFFIX:
             continue
-        if any(part.startswith(".") for part in path.relative_to(source).parts):
+        relative_parts = path.relative_to(source).parts
+        if any(part.startswith(".") for part in relative_parts) or relative_parts[0].casefold() == "bundles":
             continue
         try:
             path.resolve().relative_to(output)

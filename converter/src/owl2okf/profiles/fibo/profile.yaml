@@ -1,6 +1,10 @@
 name: fibo
 version: "0.1.0"
 namespace: https://spec.edmcouncil.org/fibo/ontology/
+contributor_identities:
+  ekendall@thematix.com:
+    actor: human:ElisaKendall
+    profile: https://github.com/ElisaKendall
 path_strategy: ontology-module
 title_predicates:
   - https://www.w3.org/2004/02/skos/core#prefLabel
